@@ -45,14 +45,22 @@ export DIR_SUBLIME="$STACKROOT/software/sublime_text_3/"
 # todo: make it so that dirs can be commented out here (explicit checking before
 # usage below..!)
 
-export INFOPATH="$DIR_LOCAL/share/info":"$HOME/.guix-profile/share/info"
+export GUIX_PROFILE="$STACKROOT/.guix-profile"
 
-export PATH="$HOME/.guix-profile/bin:$HOME/.guix-profile/sbin${PATH:+:}$PATH"
-export GUILE_LOAD_PATH="$HOME/.guix-profile/share/guile/site/2.2${GUILE_LOAD_PATH:+:}$GUILE_LOAD_PATH"
-export GUILE_LOAD_COMPILED_PATH="$HOME/.guix-profile/lib/guile/2.2/site-ccache${GUILE_LOAD_COMPILED_PATH:+:}$GUILE_LOAD_COMPILED_PATH"
-export XDG_DATA_DIRS="$HOME/.guix-profile/share${XDG_DATA_DIRS:+:}$XDG_DATA_DIRS"
-export GIO_EXTRA_MODULES="$HOME/.guix-profile/lib/gio/modules${GIO_EXTRA_MODULES:+:}$GIO_EXTRA_MODULES"
-export GUIX_LOCPATH="$HOME/.guix-profile/lib/locale"
+export INFOPATH="$DIR_LOCAL/share/info":"$GUIX_PROFILE/share/info"
+export PATH="$GUIX_PROFILE/bin:$GUIX_PROFILE/sbin${PATH:+:}$PATH"
+export GUILE_LOAD_PATH="$GUIX_PROFILE/share/guile/site/2.2${GUILE_LOAD_PATH:+:}$GUILE_LOAD_PATH"
+export GUILE_LOAD_COMPILED_PATH="$GUIX_PROFILE/lib/guile/2.2/site-ccache${GUILE_LOAD_COMPILED_PATH:+:}$GUILE_LOAD_COMPILED_PATH"
+export XDG_DATA_DIRS="$GUIX_PROFILE/share${XDG_DATA_DIRS:+:}$XDG_DATA_DIRS"
+export GIO_EXTRA_MODULES="$GUIX_PROFILE/lib/gio/modules${GIO_EXTRA_MODULES:+:}$GIO_EXTRA_MODULES"
+export GUIX_LOCPATH="$GUIX_PROFILE/lib/locale"
+export GI_TYPELIB_PATH="$GUIX_PROFILE/lib/girepository-1.0"
+export PYTHONPATH="$GUIX_PROFILE/lib/python3.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
+export PYTHONPATH="$GUIX_PROFILE/lib/python2.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
+export GIT_EXEC_PATH="$GUIX_PROFILE/libexec/git-core"
+export TERMINFO_DIRS="$GUIX_PROFILE/share/terminfo${TERMINFO_DIRS:+:}$TERMINFO_DIRS"
+export GUIX_GTK3_PATH="$GUIX_PROFILE/lib/gtk-3.0${GUIX_GTK3_PATH:+:}$GUIX_GTK3_PATH"
+
 
 
 export EDITOR='emacsclient -t -a=\"\"'

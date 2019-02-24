@@ -53,7 +53,7 @@
     (propagated-inputs
      `(("dconf" ,dconf)
 	   ("gtk", gtk+)
-       ("gtksourceview" ,gtksourceview))))
+       ("gtksourceview" ,gtksourceview)))
     (arguments
      `(#:phases
        (modify-phases %standard-phases

@@ -1,0 +1,14 @@
+glibc-locales
+emacs-minimal
+python2
+python
+pcre
+pcre2
+tmux
+zsh
+gnupg
+xmonad
+libsecret
+git
+fasd
+go

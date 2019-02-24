@@ -1,0 +1,102 @@
+[user]
+	email = <MAIL>
+	name = Florian Thevissen
+
+[credential "https://github.com"]
+	username = flnth
+
+[advice]
+	pushNonFastForward = true
+	statusHints        = false
+	commitBeforeMerge  = false
+	resolveConflict    = true
+	implicitIdentity   = false
+	detachedHead       = true
+
+[color "status"]
+	header = 241
+	updated = blue
+	added = 2
+	changed = red
+	untracked = red
+	branch = yellow
+	unmerged = red
+	diff = off
+#[format]
+# pretty = format:%C(auto)%h %d%Creset %s%n%Cgreen%ad%Creset %aN <%aE>%n
+
+[color "diff"]
+	# meta = yellow bold
+	# frag = magenta bold
+	# old = red bold
+	# new = green bold
+	meta = 240
+	frag = magenta bold
+	func = yellow
+	# commit = 227 bold
+	# old = red bold
+	# new = green bold
+	whitespace = red reverse
+	plain = 244
+
+[color "diff-highlight"]
+	oldNormal = red
+	oldHighlight = red bold
+	newNormal = green
+	newHighlight = green bold
+
+[alias]
+	lg = log --pretty=format:\"%C(auto)%h  %C(10)%<(40)%ad%Creset %C(yellow)%<(20)%d %C(32)%<(20)%an %Creset %n%w(80,0,0)%s %n\" --graph --date=format:\"%y-%m-%d  %H:%M\"
+	slg = shortlog --format=\"%C(107)%s\"
+	patch = !git --no-pager diff --no-color
+	dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy  | less --tabs=4 -RFX; }; f"
+
+[push]
+	default = simple
+	follow-tags = true
+
+[rerere]
+	enabled = true
+
+[merge]
+	stat = true
+	tool = meld
+	# ff = only
+	conflictstyle = diff3
+
+[commit]
+	verbose = true
+
+[status]
+	showUntrackedFiles = no
+	ui = always
+	submoduleSummary = true
+	short = true
+
+[diff-so-fancy]
+	markEmptyLines = false
+	changeHunkIndicators = true
+	useUnicodeRuler = true
+
+[mergetool.ediff]
+	cmd = emacsclient -nw --socket-name=/tmp/emacs1000/server -e \"(ediff-merge-files-with-ancestor \\\"$LOCAL\\\" \\\"$REMOTE\\\" \\\"$BASE\\\" nil \\\"$MERGED\\\")\"
+
+[mergetool "icdiff"]
+	prompt = false
+	cmd = icdiff
+
+[mergetool "meld"]
+	path = /home/fthevissen/system/meld
+
+[diff]
+	mnemonicprefix = true
+	renames = copies
+	tool = ediff
+	noprefix = false
+
+[core]
+	whitespace = trailing-space,space-before-tab
+	trustctime = false
+
+[pager]
+	diff = diff-so-fancy | less --tabs=4 -Rc -+X --pattern '^(Date|added|deleted|modified): '

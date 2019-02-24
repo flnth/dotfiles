@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "---- stashing.."
+git stash;
+echo "---- rebasing.."
+git rebase "$@"
+echo "---- popping stash.."
+git stash pop
+

@@ -36,6 +36,9 @@ echo "\n"
 echo_ "Installing system packages..."
 . install/install-system-packages.sh system/packages
 
+# realtime-/lowlatency kernel
+[[ $(uname -a) == *"Ubuntu"* ]] && sudo apt install linux-lowlatency
+[[ $(uname -a) == *"Debian"* ]] && sudo apt install linux-image-rt-amd64
 
 echo "\n"
 #█▓▒░ guix

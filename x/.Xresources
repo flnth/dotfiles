@@ -1,0 +1,300 @@
+
+*customization: -color
+
+
+
+! -- colors ---------------------------------------------------------- 
+! special
+*.foreground:   #b9bbba
+*.background:   #161616
+*.cursorColor:  #c6ab94
+
+! black
+*.color0:       #2a2828
+*.color8:       #3e4249
+
+! red
+*.color1:       #ac443f
+*.color9:       #cc6666
+
+! green
+! *.color2:       #657d3e  # old,   also old: #678439
+*.color2:       #83a748
+*.color10:      #98bd5e
+
+! yellow ! #cf7c43, #d4d310   , nice yellow-ish:  f2c585
+*.color3:       #cf7c43
+*.color11:      #fbcb41
+
+! blue
+*.color4:       #454dd0
+*.color12:      #337ebe
+
+! magenta
+*.color5:       #6e6ccb
+*.color13:      #8c8ac2
+
+! cyan
+*.color6:       #368d82
+*.color14:      #6dbeb3
+
+! white
+*.color7:       #c6ab94
+*.color15:      #dfcfc1
+
+! -- additional colors --  (foreground,background,cursorColor)
+!*.color20:      #b9bbba    
+!*.color21:      #1d1d1a
+!*.color22:      #c6ab94
+
+! *.color 25 
+
+*.color233:     #161616
+*.color234:     #181816
+*.color235:     #212121
+
+
+URxvt.intensityStyles: true
+
+URxvt.preeditType:Root
+
+URxvt.font:          xft:CodeNewRoman Nerd Font:pixelsize=14:style=Book,xft:file\-icons:pixelsize=10
+URxvt*boldFont:      xft:CodeNewRoman Nerd Font:pixelsize=14:style=Bold,xft:file\-icons:pixelsize=10
+URxvt*italicFont:    xft:CodeNewRoman Nerd Font:pixelsize=14:style=Italic,xft:file\-icons:pixelsize=10
+URxvt*boldItalicFont:xft:CodeNewRoman Nerd Font:pixelsize=14:style=Italic,xft:file\-icons:pixelsize=10
+
+
+!URxvt
+
+URxvt*borderless:      1
+URxvt*buffered:        true
+URxvt.cursorBlink: 		 false
+URxvt.visualBell:      true
+URxvt*cursorUnderline: 0
+URxvt*depth:           32
+URxvt*transparent:     0
+URxvt*shading:         0
+
+! Xft.dpi:	96
+URxvt*iso14755:	false
+URxvt*iso14755_52:	false
+URxvt*loginShell:	false
+URxvt*saveLines:	5000
+URxvt*scrollBar:	0
+URxvt*termName:	rxvt-unicode-256color
+URxvt*letterSpace: 0
+
+URxvt.imLocale:	en_US.UTF-8
+
+URxvt*dynamicColors:    	on
+URxvt*fading: 1
+
+! -----------------------------------------------------------------------------------
+!                   key bindings
+! -----------------------------------------------------------------------------------
+
+! -- emacs: helm-accessings
+URxvt.keysym.Menu:            \033[2;1A
+URxvt.keysym.M-Menu:          \033[2;1B
+URxvt.keysym.Control-Menu:    \033[2;1C
+URxvt.keysym.Shift-Menu:      \033[2;1D
+
+! -- emacs: line selection
+URxvt.keysym.Control-Shift-N:	\033[1;6A
+URxvt.keysym.Control-Shift-P:	\033[1;6B
+
+! -- emacs: more navigation
+URxvt.keysym.Control-Shift-H:	\033[8;3A
+URxvt.keysym.Control-Shift-J:	\033[7;3A
+URxvt.keysym.Control-Shift-K:	\033[7;3D
+URxvt.keysym.Control-Shift-L:	\033[8;3D
+
+! -- emacs: follow definition in other window
+URxvt.keysym.Control-Shift-E: \033[1;65
+
+! -- emacs: new tab
+URxvt.keysym.Control-Shift-T: \033[1;66
+
+! -- emacs: code folding
+URxvt.keysym.Control-Tab:	\033[3;1A
+URxvt.keysym.Control-Meta-Tab:	\033[9;1E
+URxvt.keysym.Meta-Tab:	\033[9;2A
+
+! -- emacs: re-run compilation
+URxvt.keysym.Control-Shift-B: \033[1;6C
+
+! -- emacs: saving
+URxvt.keysym.Control-Shift-S: \033[1;A
+
+! -- emacs: navigation history
+URxvt.keysym.Control-comma:  \033[3;1B
+URxvt.keysym.Control-period: \033[3;1C
+
+!! -- urxvt:  perl scripts
+URxvt.keysym.F11:	perl:fullscreen:switch
+
+!URxvt.resize-font.smaller:  Control-down
+!URxvt.resize-font.bigger:   Control-up
+
+URxvt.keysym.C-equal:  resize-font:bigger
+URxvt.keysym.C-minus:  resize-font:smaller
+URxvt.keysym.Control-Shift-Home: resize-font:reset
+URxvt.keysym.Control-question:   resize-font:show
+
+! URxvt.keysym.C-equal:  font-size:incglobal
+! URxvt.keysym.C-S-equal:  font-size:incglobal
+! URxvt.keysym.C-minus:  font-size:decglobal
+! URxvt.keysym.C-S-minus:  font-size:decglobal
+! URxvt.keysym.Control-Shift-Home: font-size:reset
+! URxvt.keysym.Control-question:   font-size:show
+
+!! -- end/home for line and document start/end
+URxvt.keysym.End:	            \033[1;7F
+URxvt.keysym.Control-End:     \033[1;7G
+URxvt.keysym.Home:	          \033[1;7H
+URxvt.keysym.Control-Home:    \033[1;7I
+
+! -- super key:  navigation --
+! Mod4 == super key
+URxvt.keysym.Mod4-Up:     \033[5;1A
+URxvt.keysym.Mod4-Down:   \033[5;1B
+URxvt.keysym.Mod4-Left:   \033[5;1C
+URxvt.keysym.Mod4-Right:  \033[5;1D
+
+! -- copy/paste --
+URxvt.clipboard.autocopy: 	true
+URxvt.keysym.Control-Shift-C: 	perl:clipboard:copy
+URxvt.keysym.Control-Shift-V:   perl:clipboard:paste
+
+! -- Code execution and debugging --
+! URxvt.keysym.Alt-F5:              \033[5;2E
+! URxvt.keysym.Alt-F6:              \033[5;2F
+! URxvt
+
+! -- experiments
+URxvt.keysym.Alt-Enter:	\033[4;1A
+URxvt.keysym.M-Enter:     \033[5;1F
+URxvt.keysym.Control-Enter:   \033[4;1B
+
+URxvt.keysym.Control-tilde:   \033[1;8A
+URxvt.keysym.Control-`:     \033[1;8B
+URxvt.keysym.Control-apostrophe: \033[1;8C
+URxvt.keysym.Control-acute: \033[1;8D
+
+! -- free up control characters
+URxvt.keysym.Control-i: \033[9;1B
+URxvt.keysym.Control-I: \033[9;1A
+URxvt.keysym.Control-bracketleft: \033[9;1C
+URxvt.keysym.Control-braceleft: \033[9;1D
+
+! ---------------------------------------------------------------------------
+!
+
+! ---------------------------------------------------------------------------
+
+! URxvt.perl-ext-common:	default,matcher,font-size,eval,clipboard,myfullscreen,-searchable-scrollback,url-select,vim-scrollback
+
+! url-select breaks underlining of whitespace :(
+URxvt.perl-ext-common:	default,matcher,font-size,eval,clipboard,myfullscreen,-searchable-scrollback,vim-scrollback
+
+! vim-scrollback
+urxvt.vim-scrollback: M-s
+! urxvt.vim-scrollback.pattern.1: \\B(/\\S+?):(\\d+)(?=:|$)               ! gcc and all 
+! urxvt.vim-scrollback.pattern.2: (?:\\s)([\\~\\.]?\\/\{1,1\}[\\.\\w]\\S+)\\b
+
+! urxvt.vim-scrollback.pattern.1: \\B(/\\S+?):(\\d+)(?=:|$)
+! urxvt.vim-scrollback.launcher.1: ee +$2 $1
+
+! matcher
+! URxvt.matcher.button:	1
+! URxvt.matcher.pattern.1: \\B(/\\S+?):(\\d+)(?=:|$)               ! gcc and all 
+! URxvt.matcher.pattern.2: (?:\\s)([\\~\\.]?\\/\{1,1\}[\\.\\w]\\S+)\\b
+! URxvt.keysym.C-Delete: perl:matcher:list
+
+! url-select
+! URxvt.keysym.M-Delete: perl:url-select:select_next
+! URxvt.url-select.launcher: firefox
+! URxvt.url-select.underline: true
+
+!URxvt.kuake.hotkey: F2
+URxvt.kuake.key: F2
+URxvt.kuake.pos_y: 23
+URxvt.kuake.pos_x: 0
+
+URxvt.geometry: 140x20
+
+URxvt.perl-lib:	/home/fthevissen/system/urxvt/perl_ext
+URxvt*perl-lib:	/home/fthevissen/system/urxvt/perl_ext
+URxvt.path: /home/fthevissen/system/urxvt/perl_ext
+URxvt*path: /home/fthevissen/system/urxvt/perl_ext
+URxvt.secondaryScreen:	true
+URxvt.secondaryWheel:	  true
+URxvt*secondaryScroll:	false
+!URxvt.underlineColor:	#AFAFAF
+URxvt.url-launcher:	firefox
+
+URxvt*skipScroll:       true
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: false
+URxvt*scrollTtyKeypress: true
+URxvt.saveLines: 1024
+
+URxvt.metaSendsEscape: true
+
+
+Xcursor.size:	24
+Xcursor.theme:	DMZ-White
+Xft.antialias:	1
+Xft.autohint:	false
+Xft.decorative:	0
+Xft.embolden:	false
+Xft.hinting:	true
+Xft.hintstyle:	hintfull
+Xft.lcdfilter:	lcddefault
+Xft.rgba:	rgb
+rofi.color-active:	#393939, #268bd2, #393939, #268bd2, #205171
+rofi.color-enabled:	true
+rofi.color-normal:	#393939, #ffffff, #393939, #268bd2, #ffffff
+rofi.color-urgent:	#393939, #f3843d, #393939, #268bd2, #ffc39c
+rofi.color-window:	#393939, #393939, #268bd2
+rofi.font:	mono 10
+xterm*boldMode:	false
+xterm*charClass:	33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*colorBDMode:	true
+xterm*eightBitInput:	false
+xterm*faceName:	xft:Ubuntu Mono:style=Regular
+xterm*faceNameDoublesize:	xft:monospace
+xterm*geometry:	250x250
+xterm*locale:	true
+xterm*metaSendsEscape:	true
+xterm*saveLines:	2000
+! xterm*termName:	xterm-256color
+xterm*utf8:	2
+
+! try Emacs,Emacs23,Emacs24
+!Emacs23*cursorColor: red
+!Emacs23*pointerColor: magents
+
+! emacs configuration doubled here for tiling-WM compatibility
+Emacs.fontBackend: xft
+Emacs.menuBar: off
+Emacs.toolbar: -1
+Emacs.verticalScrollBars: off
+
+! blank the pointer when a key is presed or after a set number of seconds of inactivity
+URxvt*pointerBlank: true
+
+
+! ------------------------------------------------------------------------------
+!         Pager
+!-------------------------------------------------------------------------------
+
+*VT100*colorULMode: on
+*VT100*colorUL: MAGENTA
+*VT100*underLine: off
+*VT100*colorBDMode: on
+*VT100*colorBD: GREEN
+
+!URxvt.colorIT:  #87af5f
+!URxvt.colorBD:  #d7d7d7
+!URxvt.colorUL:  #87fd7

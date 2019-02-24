@@ -1,0 +1,14 @@
+sudo: false
+language: haskell
+ghc:
+  - 7.8
+addons:
+  apt:
+    packages:
+      - zsh
+      - python-pip
+before_install:
+  - pip install --user cram
+  - cabal install --user text
+  - zsh --version
+script: "make test"

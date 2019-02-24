@@ -1,14 +1,26 @@
+# -*- sh -*-
+
 glibc-locales
 emacs-minimal
+
+# languages
 python2
 python
-pcre
-pcre2
+xmonad
+go
+
+# shell
 tmux
 zsh
-gnupg
-xmonad
-libsecret
-git
 fasd
-go
+pcre
+pcre2
+
+# wm
+xmonad
+
+# misc
+git
+libsecret
+gnupg
+

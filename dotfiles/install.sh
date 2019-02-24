@@ -30,14 +30,14 @@ if [[ ! $response == (y|yes|Y) ]]; then
 fi
 
 
-echo "\n\n"
+echo "\n"
 #█▓▒░ system packages
 
 echo_ "Installing system packages..."
-. install/install-system-packages.sh
+. install/install-system-packages.sh system/packages
 
 
-echo "\n\n"
+echo "\n"
 #█▓▒░ guix
 
 read -q "response?install guix packages? (y/n) "
@@ -54,7 +54,7 @@ if [[ $response == (y|yes|Y) ]]; then
 	. install/install-guix-packages.sh guix/custom
 fi
 
-echo "\n\n"
+echo "\n"
 #█▓▒░ other binaries
 
 echo_ "Installing other binaries..."

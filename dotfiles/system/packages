@@ -1,0 +1,13 @@
+# -*- sh -*-
+
+# keyboard setup
+console-data
+console-setup
+
+# misc
+git
+vim
+
+# haskell
+ghc
+cabal-install

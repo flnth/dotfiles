@@ -90,7 +90,8 @@
 																 (substitute* (find-files "." "^Makefile\\.in$")
 																			  (("/bin/pwd")
 																			   "pwd"))
-																 #t)))
+																 #t))
+												   )
 									))
 	 (inputs
 	  `(("gnutls" ,gnutls)

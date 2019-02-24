@@ -1,0 +1,723 @@
+
+==================== FINAL INTERFACE ====================
+2018-04-07 20:29:38.822304 UTC
+
+interface antig_FKne2pE40rQDS0REMcNHjS:Antigen 7102
+  interface hash: 3d29467b1602f68fcb8bfac4a86b8d04
+  ABI hash: 66d0a309eafe93ee1300e6c7ff8be1fa
+  export-list hash: 31722fa28e1724249746e87f4b1ab9a1
+  orphan hash: 96689f5ab125cfbafb9ba3a753695f0f
+  flag hash: 9fc235555f225395b6712509276bf829
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Antigen.antigen
+  Antigen.antigenSourcingStrategy
+  Antigen.bundle
+  Antigen.defaultConfig
+  Antigen.defaultZshPlugin
+  Antigen.filePathsSourcingStrategy
+  Antigen.local
+  Antigen.strictSourcingStrategy
+  Antigen.AntigenConfig{Antigen.AntigenConfig Antigen.outputDirectory Antigen.plugins}
+  Antigen.RepoStorage{Antigen.GitRepository Antigen.Local Antigen.filePath Antigen.url}
+  Antigen.SourcingStrategy
+  Antigen.ZshPlugin{Antigen.ZshPlugin Antigen.fpathLocations Antigen.sourcingLocations Antigen.sourcingStrategy Antigen.storage}
+module dependencies:
+package dependencies: array-0.5.1.0@array_E0sTtauuKsGDLZoT7lTbgZ
+                      base-4.8.1.0* binary-0.7.5.0@binar_IvYoLp9H6Xy3zEH13MmZwd
+                      bytestring-0.10.6.0@bytes_6elQVSg5cWdFrvRnfxTUrH
+                      containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN
+                      deepseq-1.4.1.1@deeps_LbCWUlehDDeLxurARKDH5o
+                      directory-1.2.2.0@direc_KowvXytSqazBcvN7MGpFtg*
+                      filepath-1.4.0.0@filep_KsGE6pHE5eZHSN90ZVax6A ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0 process-1.2.3.0@proce_FLTz0SLwyG6LJUpZ52HjkU
+                      text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh*
+                      time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH
+                      unix-2.7.1.0@unix_A3WgcI5QiHK4PDo4jSYdwQ
+orphans: base-4.8.1.0:GHC.Base base-4.8.1.0:GHC.Float
+         binary-0.7.5.0@binar_IvYoLp9H6Xy3zEH13MmZwd:Data.Binary.Generic
+         bytestring-0.10.6.0@bytes_6elQVSg5cWdFrvRnfxTUrH:Data.ByteString.Builder
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Show
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.Format.Parse
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.LocalTime.LocalTime
+family instance modules: base-4.8.1.0:Control.Applicative
+                         base-4.8.1.0:Data.Either base-4.8.1.0:Data.Functor.Identity
+                         base-4.8.1.0:Data.Monoid base-4.8.1.0:Data.Type.Equality
+                         base-4.8.1.0:Data.Void base-4.8.1.0:GHC.Exts
+                         base-4.8.1.0:GHC.Generics
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.IntMap.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.IntSet.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Map.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Sequence
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Set.Base
+                         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text
+import  -/  base-4.8.1.0:Control.Exception ad90805da5ad455017893997acf84ba2
+import  -/  base-4.8.1.0:Control.Exception.Base da2438b8a9b2933da5a60a968b3e3fac
+import  -/  base-4.8.1.0:Control.Monad dfea142d91349c4861427789d50d5b80
+import  -/  base-4.8.1.0:Data.Foldable 2e5acb797cfda6b3b7fabd7052abe290
+import  -/  base-4.8.1.0:Data.Functor 5c701b0af1708f0192a25dfe14ce6274
+import  -/  base-4.8.1.0:Data.List 2a4f5f92892d432e7113f64cd9dcca53
+import  -/  base-4.8.1.0:Data.Maybe 1cb58de2b04ee3c0c0a7dc9201184aff
+import  -/  base-4.8.1.0:Data.Monoid bd73caba6e77f9944cb89ef5bec300c6
+import  -/  base-4.8.1.0:Data.OldList 21f46c368c20a00483b41333e53a55cb
+import  -/  base-4.8.1.0:Data.Traversable 89769555cf5e62f4edd3d085405c2caa
+import  -/  base-4.8.1.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.1.0:GHC.IO c40fa9051eafbe02c69624c2ae0f498f
+import  -/  base-4.8.1.0:GHC.List f31ed8784b3e05f1397195751f7d74ea
+import  -/  base-4.8.1.0:GHC.Show b8c65ca3124f92a166c9f05120382442
+import  -/  base-4.8.1.0:Prelude 518f762991bc287d78f21a73c974da1f
+import  -/  base-4.8.1.0:System.Environment 946ddc2d7c48138bb213316abaff2a8d
+import  -/  base-4.8.1.0:System.Exit 667ccf9b7fe125c4036efb58a244974a
+import  -/  base-4.8.1.0:System.IO d541b8bdf18c04de3ab7ea0277c4eba3
+import  -/  directory-1.2.2.0@direc_KowvXytSqazBcvN7MGpFtg:System.Directory e213821d92cebb4dc934424f9b152303
+import  -/  filepath-1.4.0.0@filep_KsGE6pHE5eZHSN90ZVax6A:System.FilePath f4cffd7704c4bbe79880b28e84a9b24d
+import  -/  filepath-1.4.0.0@filep_KsGE6pHE5eZHSN90ZVax6A:System.FilePath.Posix 21938741ac31651631a60d9842b1d5bf
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  process-1.2.3.0@proce_FLTz0SLwyG6LJUpZ52HjkU:System.Process 5b65397a0b44f59aa9f01c37a043a5ce
+import  -/  text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text a305d268b7ef3fbd1de87bd464ac8e2a
+import  -/  text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.IO bc20a8a616680131177d813d1b88571a
+import  -/  text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Internal 9aaf446b91649c416d85a19f08d51f8e
+import  -/  text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Show 247f8009f433354faed2b5a5615705b2
+addDependentFile "/home/fthevissen/.stack/programs/x86_64-linux/ghc-nopie-7.10.2/lib/ghc-7.10.2/include/ghcversion.h"
+addDependentFile ".stack-work/dist/x86_64-linux-nopie/Cabal-1.22.4.0/build/autogen/cabal_macros.h"
+addDependentFile "/usr/include/stdc-predef.h"
+4c92538e17892695e17eb0b78a7bf761
+  $fEqRepoStorage :: GHC.Classes.Eq Antigen.RepoStorage
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Antigen.RepoStorage
+                  Antigen.$fEqRepoStorage_$c==
+                  Antigen.$fEqRepoStorage_$c/= -}
+4c92538e17892695e17eb0b78a7bf761
+  $fEqRepoStorage_$c/= ::
+    Antigen.RepoStorage -> Antigen.RepoStorage -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a4 :: Antigen.RepoStorage b :: Antigen.RepoStorage ->
+                 case Antigen.$fEqRepoStorage_$c== a4 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+4c92538e17892695e17eb0b78a7bf761
+  $fEqRepoStorage_$c== ::
+    Antigen.RepoStorage -> Antigen.RepoStorage -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ ds :: Antigen.RepoStorage
+                   ds1 :: Antigen.RepoStorage ->
+                 case ds of wild {
+                   Antigen.GitRepository a4
+                   -> case a4 of wild1 { Data.Text.Internal.Text dt dt1 dt2 ->
+                      case ds1 of wild2 {
+                        Antigen.GitRepository b1
+                        -> case b1 of wild3 { Data.Text.Internal.Text dt3 dt4 dt5 ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# dt2 dt5) of wild4 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> case {__pkg_ccall text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh _hs_text_memcmp GHC.Prim.ByteArray#
+                                                                                                           -> GHC.Prim.Word#
+                                                                                                           -> GHC.Prim.ByteArray#
+                                                                                                           -> GHC.Prim.Word#
+                                                                                                           -> GHC.Prim.Word#
+                                                                                                           -> GHC.Prim.State#
+                                                                                                                GHC.Prim.RealWorld
+                                                                                                           -> (# GHC.Prim.State#
+                                                                                                                   GHC.Prim.RealWorld,
+                                                                                                                 GHC.Prim.Int# #)}
+                                       dt
+                                       (GHC.Prim.int2Word# dt1)
+                                       dt3
+                                       (GHC.Prim.int2Word# dt4)
+                                       (GHC.Prim.int2Word# dt2)
+                                       GHC.Prim.realWorld# of wild5 { (#,#) ds11 ds12 ->
+                                case GHC.Prim.narrow32Int# ds12 of wild6 {
+                                  DEFAULT -> GHC.Types.False 0 -> GHC.Types.True } } } }
+                        Antigen.Local ipv -> GHC.Types.False } }
+                   Antigen.Local a4
+                   -> case ds1 of wild1 {
+                        Antigen.GitRepository ipv -> GHC.Types.False
+                        Antigen.Local b1 -> GHC.Base.eqString a4 b1 } }) -}
+4c92538e17892695e17eb0b78a7bf761
+  $fShowRepoStorage :: GHC.Show.Show Antigen.RepoStorage
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Antigen.RepoStorage
+                  Antigen.$fShowRepoStorage_$cshowsPrec
+                  Antigen.$fShowRepoStorage_$cshow
+                  Antigen.$fShowRepoStorage_$cshowList -}
+4c92538e17892695e17eb0b78a7bf761
+  $fShowRepoStorage1 :: Antigen.RepoStorage -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ w :: Antigen.RepoStorage w1 :: GHC.Base.String ->
+                 Antigen.$w$cshowsPrec 0 w w1) -}
+2bf50132d61d496bc01f928019072f2a
+  $fShowRepoStorage2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Local {"#) -}
+963d50256408588db29ce8f53028aeb5
+  $fShowRepoStorage3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "filePath = "#) -}
+ecddcb5e52952822e16ea762cffe2ba0
+  $fShowRepoStorage4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
+df0a22a1267b37028440659f88b77c46
+  $fShowRepoStorage5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "url = "#) -}
+68838d120a7b781389acece3926f6425
+  $fShowRepoStorage6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "GitRepository {"#) -}
+4c92538e17892695e17eb0b78a7bf761
+  $fShowRepoStorage_$cshow :: Antigen.RepoStorage -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Antigen.RepoStorage ->
+                 Antigen.$fShowRepoStorage_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+4c92538e17892695e17eb0b78a7bf761
+  $fShowRepoStorage_$cshowList ::
+    [Antigen.RepoStorage] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Antigen.RepoStorage
+                   Antigen.$fShowRepoStorage1) -}
+4c92538e17892695e17eb0b78a7bf761
+  $fShowRepoStorage_$cshowsPrec ::
+    GHC.Types.Int -> Antigen.RepoStorage -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S,1*U(U)><S,1*U><L,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ w :: GHC.Types.Int
+                   w1 :: Antigen.RepoStorage
+                   w2 :: GHC.Base.String ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Antigen.$w$cshowsPrec ww1 w1 w2 }) -}
+daeae1bddcbe1fafb188164971396da8
+  $sconcat :: [[a3]] -> [a3]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ a4 xs :: [[a4]] ->
+                 GHC.Base.build
+                   @ a4
+                   (\ @ b c :: a4 -> b -> b[OneShot] n :: b[OneShot] ->
+                    GHC.Base.foldr
+                      @ [a4]
+                      @ b
+                      (\ x :: [a4] y :: b[OneShot] -> GHC.Base.foldr @ a4 @ b c y x)
+                      n
+                      xs)) -}
+4c92538e17892695e17eb0b78a7bf761
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> Antigen.RepoStorage -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <L,U><S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int#
+                   w :: Antigen.RepoStorage
+                   w1 :: GHC.Base.String ->
+                 case w of wild {
+                   Antigen.GitRepository b1
+                   -> let {
+                        p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                        = \ x :: GHC.Base.String[OneShot] ->
+                          GHC.Base.++
+                            @ GHC.Types.Char
+                            Antigen.$fShowRepoStorage6
+                            (GHC.Base.++
+                               @ GHC.Types.Char
+                               Antigen.$fShowRepoStorage5
+                               (case Data.Text.Show.$w$cshowsPrec
+                                       b1
+                                       (GHC.Base.++
+                                          @ GHC.Types.Char
+                                          Antigen.$fShowRepoStorage4
+                                          x) of ww1 { (#,#) ww2 ww3 ->
+                                GHC.Types.: @ GHC.Types.Char ww2 ww3 }))
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# ww 11) of wild1 {
+                        GHC.Types.False -> p w1
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows9
+                             (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 w1)) }
+                   Antigen.Local b1
+                   -> let {
+                        g :: GHC.Base.String -> GHC.Base.String
+                          {- Arity: 1, Strictness: <L,1*U> -}
+                        = \ x :: GHC.Base.String[OneShot] ->
+                          GHC.Base.++
+                            @ GHC.Types.Char
+                            Antigen.$fShowRepoStorage3
+                            (GHC.Types.:
+                               @ GHC.Types.Char
+                               GHC.Show.shows6
+                               (GHC.Show.showLitString
+                                  b1
+                                  (GHC.Types.:
+                                     @ GHC.Types.Char
+                                     GHC.Show.shows6
+                                     (GHC.Base.++ @ GHC.Types.Char Antigen.$fShowRepoStorage4 x))))
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# ww 11) of wild1 {
+                        GHC.Types.False
+                        -> GHC.Base.++ @ GHC.Types.Char Antigen.$fShowRepoStorage2 (g w1)
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows9
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Antigen.$fShowRepoStorage2
+                                (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 w1))) } }) -}
+200ece969c9972f4b364e836d7425003
+  $wa ::
+    [Antigen.ZshPlugin]
+    -> GHC.IO.FilePath
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <S,U><L,U><L,U>, Inline: [0] -}
+7421619e446109a13f17a632c3e93541
+  data AntigenConfig
+    = AntigenConfig {plugins :: ![Antigen.ZshPlugin],
+                     outputDirectory :: GHC.IO.FilePath}
+4c92538e17892695e17eb0b78a7bf761
+  data RepoStorage
+    = GitRepository {url :: !Data.Text.Internal.Text}
+    | Local {filePath :: !GHC.IO.FilePath}
+b72ee7db8c5f72d7bade67cc86e7b112
+  type SourcingStrategy = GHC.Types.IO [GHC.IO.FilePath]
+c5c5afc20fd86b35bfffa9327b3d88d6
+  data ZshPlugin
+    = ZshPlugin {storage :: Antigen.RepoStorage,
+                 sourcingStrategy :: Antigen.SourcingStrategy,
+                 sourcingLocations :: [GHC.IO.FilePath],
+                 fpathLocations :: [GHC.IO.FilePath]}
+75c3d983211e65b465eff525f29491c9
+  antigen :: Antigen.AntigenConfig -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <S(SL),1*U(U,U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Antigen.antigen1
+                  `cast`
+                (<Antigen.AntigenConfig>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+0daf72550d9626722ad399bc6c9bbd46
+  antigen1 ::
+    Antigen.AntigenConfig
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S(SL),1*U(U,U)><L,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: Antigen.AntigenConfig
+                   w1 :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case w of ww { Antigen.AntigenConfig ww1 ww2 ->
+                 Antigen.$wa ww1 ww2 w1 }) -}
+eded9a6dde9e2ed67738e38ccf262e33
+  antigenSourcingStrategy :: Antigen.SourcingStrategy
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Antigen.antigenSourcingStrategy1
+                  `cast`
+                (Sym (GHC.Types.NTCo:IO[0] <[GHC.IO.FilePath]>_R)) -}
+896295482f3c52a7b3ad1c7ae1ada313
+  antigenSourcingStrategy1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.IO.FilePath] #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case System.Posix.Directory.getWorkingDirectory1
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case Antigen.antigenSourcingStrategy9
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 letrec {
+                   go1 :: [[GHC.Types.Char]] -> [[[GHC.Types.Char]]]
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ ds :: [[GHC.Types.Char]] ->
+                     case ds of wild {
+                       [] -> GHC.Types.[] @ [[GHC.Types.Char]]
+                       : y ys
+                       -> case GHC.List.filter
+                                 @ [GHC.Types.Char]
+                                 (Data.OldList.isSuffixOf @ GHC.Types.Char GHC.Classes.$fEqChar y)
+                                 ipv3 of wild1 {
+                            [] -> go1 ys
+                            : ds3 ds4 -> GHC.Types.: @ [[GHC.Types.Char]] wild1 (go1 ys) } }
+                 } in
+                 case go1 Antigen.antigenSourcingStrategy2 of wild {
+                   []
+                   -> case GHC.IO.Handle.Text.hPutStr2
+                             GHC.IO.Handle.FD.stdout
+                             (GHC.CString.unpackAppendCString#
+                                "No files to source among "#
+                                (GHC.Show.showList__
+                                   @ [GHC.Types.Char]
+                                   GHC.Show.shows_$cshowList
+                                   ipv3
+                                   (GHC.Types.[] @ GHC.Types.Char)))
+                             GHC.Types.True
+                             ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                      System.Exit.die2 @ [GHC.IO.FilePath] ipv4 }
+                   : matchedFiles ds -> (# ipv2, matchedFiles #) } } }) -}
+eff36ba56694a3e5332a42f8c591e606
+  antigenSourcingStrategy10 :: [GHC.IO.FilePath]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.IO.FilePath
+                   Antigen.antigenSourcingStrategy13
+                   Antigen.antigenSourcingStrategy11) -}
+5980fc5c92c553490f9d71f8842cb77b
+  antigenSourcingStrategy11 :: [GHC.IO.FilePath]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.IO.FilePath
+                   Antigen.antigenSourcingStrategy12
+                   (GHC.Types.[] @ GHC.IO.FilePath)) -}
+6f369039f61ca5a829a2402a7778ddc7
+  antigenSourcingStrategy12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ".."#) -}
+c9928acfe54bbe50b37ad737152f5bf0
+  antigenSourcingStrategy13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "."#) -}
+564155ae5ff5cfc9e6e370a9c8f29dfd
+  antigenSourcingStrategy2 :: [[GHC.Types.Char]]
+  {- Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Antigen.antigenSourcingStrategy_ns
+                   Antigen.antigenSourcingStrategy3) -}
+238faf0e4b7526fc9ba6a428788f3afc
+  antigenSourcingStrategy3 :: [[GHC.Types.Char]]
+  {- Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Antigen.antigenSourcingStrategy8
+                   Antigen.antigenSourcingStrategy4) -}
+b3da1ed1d5d2cd12a7a8ded18a68cd0f
+  antigenSourcingStrategy4 :: [[GHC.Types.Char]]
+  {- Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Antigen.antigenSourcingStrategy7
+                   Antigen.antigenSourcingStrategy5) -}
+376d26b4a3107e4d9c917a290b3c6b97
+  antigenSourcingStrategy5 :: [[GHC.Types.Char]]
+  {- Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Antigen.antigenSourcingStrategy6
+                   (GHC.Types.[] @ [GHC.Types.Char])) -}
+bb635d705065d45464fca22d425a4f9b
+  antigenSourcingStrategy6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ".sh"#) -}
+73a4413e5871dfa47bbe7e30867965a3
+  antigenSourcingStrategy7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ".zsh"#) -}
+a764b2ed0dbebddfaa7adaea5b133393
+  antigenSourcingStrategy8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "init.zsh"#) -}
+7cda64d7248c51532c1dc682f76ded3e
+  antigenSourcingStrategy9 ::
+    GHC.IO.FilePath
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.IO.FilePath] #)
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: (\ p :: GHC.IO.FilePath
+                   s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case System.Directory.getDirectoryContents1
+                        p
+                        s of ds { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    letrec {
+                      go1 :: [[GHC.Types.Char]] -> [[GHC.Types.Char]]
+                        {- Arity: 1, Strictness: <S,1*U> -}
+                      = \ ds1 :: [[GHC.Types.Char]] ->
+                        case ds1 of wild {
+                          [] -> GHC.Types.[] @ [GHC.Types.Char]
+                          : y ys
+                          -> case GHC.List.elem
+                                    @ GHC.IO.FilePath
+                                    GHC.Classes.$fEq[]_$s$fEq[]1
+                                    y
+                                    Antigen.antigenSourcingStrategy10 of wild1 {
+                               GHC.Types.False
+                               -> GHC.Types.:
+                                    @ [GHC.Types.Char]
+                                    (System.FilePath.Posix.combine p y)
+                                    (go1 ys)
+                               GHC.Types.True -> go1 ys } }
+                    } in
+                    go1 ipv1 #) }) -}
+e8597ddbca6c343dba1458fe59bbebd1
+  antigenSourcingStrategy_ns :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ".plugin.zsh"#) -}
+ab35fd45d11592ec09b2303d81f3214e
+  bundle :: Data.Text.Internal.Text -> Antigen.ZshPlugin
+  {- Arity: 1, Strictness: <L,1*U(U,U,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ repo :: Data.Text.Internal.Text ->
+                 Antigen.ZshPlugin
+                   (case Data.Text.Internal.Fusion.unstream
+                           (Data.Text.Internal.Fusion.Common.append
+                              (Data.Text.Internal.Fusion.stream Antigen.bundle7)
+                              (Data.Text.Internal.Fusion.stream
+                                 repo)) of dt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                    Antigen.GitRepository dt })
+                   Antigen.bundle3
+                     `cast`
+                   (Sym (GHC.Types.NTCo:IO[0] <[GHC.IO.FilePath]>_R))
+                   Antigen.bundle2
+                   Antigen.bundle1) -}
+6fae1d8b191ab884a751e2bbee7b8f87
+  bundle1 :: [GHC.IO.FilePath]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.IO.FilePath
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   (GHC.Types.[] @ GHC.IO.FilePath)) -}
+9bcf3982b897961a7640c88c7614f183
+  bundle2 :: [GHC.IO.FilePath]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.IO.FilePath
+                   Antigen.antigenSourcingStrategy13
+                   (GHC.Types.[] @ GHC.IO.FilePath)) -}
+409af18eaf465d40ac8e582a4414e86b
+  bundle3 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.IO.FilePath] #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case System.Posix.Directory.getWorkingDirectory1
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case Antigen.antigenSourcingStrategy9
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case GHC.List.filter
+                        @ [GHC.Types.Char]
+                        Antigen.bundle6
+                        ipv3 of wild {
+                   []
+                   -> case GHC.IO.Handle.Text.hPutStr2
+                             GHC.IO.Handle.FD.stdout
+                             (GHC.CString.unpackAppendCString#
+                                "No *.plugin.zsh file in "#
+                                (GHC.Base.++ @ GHC.Types.Char ipv1 Antigen.bundle5))
+                             GHC.Types.True
+                             ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                      System.Exit.die2 @ [GHC.IO.FilePath] ipv4 }
+                   : file ds
+                   -> case ds of wild1 {
+                        []
+                        -> (# ipv2,
+                              GHC.Types.:
+                                @ GHC.IO.FilePath
+                                file
+                                (GHC.Types.[] @ GHC.IO.FilePath) #)
+                        : ipv4 ipv5
+                        -> case GHC.IO.Handle.Text.hPutStr2
+                                  GHC.IO.Handle.FD.stdout
+                                  (GHC.CString.unpackAppendCString#
+                                     "Too many *.plugin.zsh files in "#
+                                     (GHC.Base.++ @ GHC.Types.Char ipv1 Antigen.bundle4))
+                                  GHC.Types.True
+                                  ipv2 of ds3 { (#,#) ipv6 ipv7 ->
+                           System.Exit.die2 @ [GHC.IO.FilePath] ipv6 } } } } }) -}
+1ce6340b8658e5159ec9f0321b57d38c
+  bundle4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "!"#) -}
+897f584a2545b320fd46f8042916f390
+  bundle5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "! See antigenSourcingStrategy example in README on how to configure this."#) -}
+fbb718e6a34b3eca452ebaf6014729c1
+  bundle6 :: [GHC.Types.Char] -> GHC.Types.Bool
+  {- Arity: 1,
+     Unfolding: (\ hs :: [GHC.Types.Char] ->
+                 case Data.OldList.dropLengthMaybe
+                        @ GHC.Types.Char
+                        @ GHC.Types.Char
+                        Antigen.antigenSourcingStrategy_ns
+                        hs of wild {
+                   GHC.Base.Nothing -> GHC.Types.False
+                   GHC.Base.Just x
+                   -> GHC.Classes.$fEq[]_$s$c==1
+                        Antigen.antigenSourcingStrategy_ns
+                        (Data.OldList.dropLength
+                           @ GHC.Types.Char
+                           @ GHC.Types.Char
+                           x
+                           hs) }) -}
+dc894e924c683448552c214ba6acdb4c
+  bundle7 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   "https://github.com/"#) -}
+e68e3fe5243377b8c4e309e7ad5c4b7e
+  defaultConfig :: Antigen.AntigenConfig
+  {- Strictness: m,
+     Unfolding: (Antigen.AntigenConfig
+                   (GHC.Types.[] @ Antigen.ZshPlugin)
+                   Antigen.defaultConfig1) -}
+113545b38ff0729c5a89a08815e52fa4
+  defaultConfig1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ".antigen-hs"#) -}
+8c6016531392beabd33218c36417aa05
+  defaultZshPlugin :: Antigen.ZshPlugin
+  {- Strictness: m,
+     Unfolding: (Antigen.ZshPlugin
+                   Antigen.defaultZshPlugin1
+                   Antigen.bundle3
+                     `cast`
+                   (Sym (GHC.Types.NTCo:IO[0] <[GHC.IO.FilePath]>_R))
+                   Antigen.bundle2
+                   Antigen.bundle1) -}
+95621d783f96788490e4b65e58b95fe7
+  defaultZshPlugin1 :: Antigen.RepoStorage
+  {- Strictness: b -}
+0538549938804f4f49b114c23abc7099
+  filePath :: Antigen.RepoStorage -> GHC.IO.FilePath
+  RecSel Antigen.RepoStorage
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Antigen.RepoStorage ->
+                 case ds of wild {
+                   Antigen.GitRepository ipv -> Antigen.filePath1
+                   Antigen.Local ds1 -> ds1 }) -}
+dda7348de281ec16114f7253c49f66fc
+  filePath1 :: GHC.IO.FilePath
+  {- Strictness: b -}
+58065280691ee596b3410d8a2ed17db1
+  filePathsSourcingStrategy ::
+    [GHC.IO.FilePath] -> Antigen.SourcingStrategy
+  {- Arity: 2, Strictness: <L,1*U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Antigen.filePathsSourcingStrategy1
+                  `cast`
+                (<[GHC.IO.FilePath]>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <[GHC.IO.FilePath]>_R)) -}
+38d95667f15c013400f2d994da4c5bdc
+  filePathsSourcingStrategy1 ::
+    [GHC.IO.FilePath]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.IO.FilePath] #)
+  {- Arity: 2, Strictness: <L,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ paths :: [GHC.IO.FilePath]
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case System.Posix.Directory.getWorkingDirectory1
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    GHC.Base.build
+                      @ [GHC.Types.Char]
+                      (\ @ b1
+                         c :: [GHC.Types.Char] -> b1 -> b1[OneShot]
+                         n :: b1[OneShot] ->
+                       GHC.Base.foldr
+                         @ [GHC.Types.Char]
+                         @ b1
+                         (GHC.Base.mapFB
+                            @ [GHC.Types.Char]
+                            @ b1
+                            @ [GHC.Types.Char]
+                            c
+                            (System.FilePath.Posix.combine ipv1))
+                         n
+                         paths) #) }) -}
+b808ca92e336b5ce54bd28f51e28d06f
+  fpathLocations :: Antigen.ZshPlugin -> [GHC.IO.FilePath]
+  RecSel Antigen.ZshPlugin
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLLS),1*U(A,A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Antigen.ZshPlugin ->
+                 case ds of wild { Antigen.ZshPlugin ds1 ds2 ds3 ds4 -> ds4 }) -}
+ccb940102fa3c7c298f2740ba4822963
+  local :: GHC.IO.FilePath -> Antigen.ZshPlugin
+  {- Arity: 1, Strictness: <L,U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ filePath2 :: GHC.IO.FilePath ->
+                 Antigen.ZshPlugin
+                   (Antigen.$WLocal filePath2)
+                   Antigen.bundle3
+                     `cast`
+                   (Sym (GHC.Types.NTCo:IO[0] <[GHC.IO.FilePath]>_R))
+                   Antigen.bundle2
+                   Antigen.bundle1) -}
+b7feb24ecefd858f98fb08a5f9ccfe89
+  outputDirectory :: Antigen.AntigenConfig -> GHC.IO.FilePath
+  RecSel Antigen.AntigenConfig
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SS),1*U(1*H,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Antigen.AntigenConfig ->
+                 case ds of wild { Antigen.AntigenConfig ds1 ds2 -> ds2 }) -}
+f52d98a2c07e8214e76f3f661e07322e
+  plugins :: Antigen.AntigenConfig -> [Antigen.ZshPlugin]
+  RecSel Antigen.AntigenConfig
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Antigen.AntigenConfig ->
+                 case ds of wild { Antigen.AntigenConfig ds1 ds2 -> ds1 }) -}
+c95f994eb70fcee4396a7ba3fc3276c0
+  sourcingLocations :: Antigen.ZshPlugin -> [GHC.IO.FilePath]
+  RecSel Antigen.ZshPlugin
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLSL),1*U(A,A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Antigen.ZshPlugin ->
+                 case ds of wild { Antigen.ZshPlugin ds1 ds2 ds3 ds4 -> ds3 }) -}
+74c8a8b8db4c571b9313a5cf5141fe36
+  sourcingStrategy :: Antigen.ZshPlugin -> Antigen.SourcingStrategy
+  RecSel Antigen.ZshPlugin
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSLL),1*U(A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Antigen.ZshPlugin ->
+                 case ds of wild { Antigen.ZshPlugin ds1 ds2 ds3 ds4 -> ds2 }) -}
+44a1df327b5ec365cb16ef74e39aaf50
+  storage :: Antigen.ZshPlugin -> Antigen.RepoStorage
+  RecSel Antigen.ZshPlugin
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLLL),1*U(1*U,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Antigen.ZshPlugin ->
+                 case ds of wild { Antigen.ZshPlugin ds1 ds2 ds3 ds4 -> ds1 }) -}
+9f969197e4358aa92257f959bfcd8995
+  strictSourcingStrategy :: Antigen.SourcingStrategy
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Antigen.bundle3
+                  `cast`
+                (Sym (GHC.Types.NTCo:IO[0] <[GHC.IO.FilePath]>_R)) -}
+67cd831af5969bf3c3e7c8e7e5675a34
+  url :: Antigen.RepoStorage -> Data.Text.Internal.Text
+  RecSel Antigen.RepoStorage
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Antigen.RepoStorage ->
+                 case ds of wild {
+                   Antigen.GitRepository ds1 -> ds1
+                   Antigen.Local ipv -> Antigen.url1 }) -}
+ad5878d57724d96270ee7805b8b62bae
+  url1 :: Data.Text.Internal.Text
+  {- Strictness: b -}
+instance GHC.Classes.Eq [Antigen.RepoStorage]
+  = Antigen.$fEqRepoStorage
+instance GHC.Show.Show [Antigen.RepoStorage]
+  = Antigen.$fShowRepoStorage
+"SPEC/Antigen concat @ [] _" [ALWAYS] forall @ a4
+                                             $dFoldable :: Data.Foldable.Foldable []
+  Data.Foldable.concat @ [] @ a4 $dFoldable = Antigen.$sconcat @ a4
+"SPEC/Antigen fromString @ Text" [ALWAYS] forall tpl :: Data.String.IsString
+                                                          Data.Text.Internal.Text
+  Data.String.fromString @ Data.Text.Internal.Text tpl
+  = Data.Text.pack
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

@@ -1,0 +1,135 @@
+# -*- mode: org -*-
+
+* zsh configuration
+Assumes that this directory will be the $ZDOTDIR.
+**  Organization
+- 01-environment.zsh ::  system-independent zsh environment, loads
+     system-dependent environment `zsh.$(hostname).env`
+- 02-autocompletion.zsh ::
+- 03-history.zsh ::
+- 04-keybindings.zsh ::
+- 05-aliases.zsh ::
+
+**  zsh startup files
+There are five startup files that zsh will read commands from:
+
+- $ZDOTDIR/.zshenv
+- $ZDOTDIR/.zprofile ::  used for sourcing $HOME/.profile, which is not sourced by-default
+- $ZDOTDIR/.zshrc
+- $ZDOTDIR/.zlogin
+- $ZDOTDIR/.zlogout
+
+If ZDOTDIR is not set, then the value of HOME is used; this is the usual case.
+
+~.zshenv~ is sourced on all invocations of the shell, unless the -f option is
+set. It should contain commands to set the command search path, plus other
+important environment variables. ~.zshenv~ should not contain commands that
+produce output or assume the shell is attached to a tty.
+
+~.zshrc~ is sourced in interactive shells. It should contain commands to set up
+aliases, functions, options, key bindings, etc.
+
+~.zlogin~ is sourced in login shells. It should contain commands that should be
+executed only in login shells. ~.zlogout~ is sourced when login shells exit.
+~.zprofile~ is similar to ~.zlogin~, except that it is sourced before ~.zshrc~.
+~.zprofile~ is meant as an alternative to ~.zlogin~ for ksh fans; the two are
+not intended to be used together, although this could certainly be done if
+desired. ~.zlogin~ is not the place for alias definitions, options, environment
+variable settings, etc.; as a general rule, it should not change the shell
+environment at all. Rather, it should be used to set the terminal type and run a
+series of external commands (fortune, msgs, etc).
+
+** headers
+
+#+begin_src  sh
+
+### Introduction {{{
+#
+#  .zshrc
+#
+#  (in $ZDOTDIR : default $HOME)
+#
+#  initial setup file for only interective zsh
+#  This file is read after .zprofile file is read.
+#
+#   zshマニュアル(日本語)
+#    http://www.ayu.ics.keio.ac.jp/~mukai/translate/zshoptions.html
+#
+#************************************************************************** }}}
+#+end_src
+
+#+begin_src sh
+#******************************************************************************
+#
+#  .zshenv
+#
+#  initial setup file for both interactive and noninteractive zsh
+#
+#  Read config sequence (except /etc/*)
+#
+#   login shell (zsh)
+#     $ZDOTDIR/.zshenv
+#     $ZDOTDIR/.zprofile   (not .profile!)
+#     $ZDOTDIR/.zshrc
+#     $ZDOTDIRA/.zlogin
+#
+#   interactive zsh
+#     $ZDOTDIR/.zshenv
+#     $ZDOTDIR/.zshrc
+#
+#   shell scripts
+#     $ZDOTDIR/.zshenv
+#
+#   remoteley noninteractive zsh (e.x ssh hostname command)
+#     $ZDOTDIR/.zshenv
+#
+#   logout:
+#     $ZDOTDIR/.zlogout
+#     /etc/zlogout
+#
+#******************************************************************************
+#+end_src
+
+#+begin_src sh
+#******************************************************************************
+#
+#  .zlogin
+#
+#  (in $ZDOTDIR : default $HOME)
+#
+#  Initial setup file for only interactive zsh.
+#  Read in after the .zshrc file when you log in.
+#  Not read in for subsequent shells.
+#
+#******************************************************************************
+#+end_src
+
+#+begin_src sh
+
+#******************************************************************************
+#
+#  .zlogout
+#
+#  (in $ZDOTDIR : default $HOME)
+#
+#  Finalize setup file for only interactive zsh when you log out.
+#  Not read in for subsequent shells.
+#
+#******************************************************************************
+#+end_src
+
+#+begin_src sh
+#******************************************************************************
+#
+#  .zprofile
+#
+#  (in $ZDOTDIR : default $HOME)
+#
+#  Initial setup file for only interactive zsh.
+#  This file is read after .zshenv file is read befere .zshrc when you login.
+#  Not read in for subsequent shells.
+#  For setting up terminal and global environment characteristics.
+#
+#******************************************************************************
+#+end_src
+

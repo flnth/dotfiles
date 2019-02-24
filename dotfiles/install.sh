@@ -69,7 +69,7 @@ go get -u github.com/junegunn/fzf
 # gitconfig
 if [[ ! -f "git/.gitconfig" ]]; then
    echo_ "Creating git/gitconfig.$(hostname) and git/.gitconfig ..."
-   . install/create_gitconfig.sh git/gitconfig.template git/gitconfig.$(hostname)
+   . install/create-gitconfig.sh git/gitconfig.template git/gitconfig.$(hostname)
    ln -s gitconfig.$(hostname) git/.gitconfig
    git add git/gitconfig.$(hostname)
 fi

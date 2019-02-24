@@ -6,7 +6,6 @@ emacs-minimal
 # languages
 python2
 python
-xmonad
 go
 
 # shell

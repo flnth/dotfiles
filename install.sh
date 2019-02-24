@@ -63,6 +63,10 @@ echo_ "Installing other binaries..."
 echo "installing fzf..."
 go get -u github.com/junegunn/fzf
 
+echo "building/installing xmonadctl"
+cd x && ghc --make xmonadctl.hs && rm {xmonadctl.o,xmonadctl.hi} && \
+mv xmonadctl ../bin
+cd ..
 
 #█▓▒░ dotfiles
 

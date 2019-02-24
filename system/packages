@@ -11,3 +11,4 @@ vim
 # haskell
 ghc
 cabal-install
+libghc-x11-dev

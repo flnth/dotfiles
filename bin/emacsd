@@ -1,0 +1,10 @@
+#!/bin/sh
+
+ret="`lsof -c emacs | grep server | tr -s " " | cut -d' ' -f8`"
+
+if [ "$ret" = "" ]; then
+    emacs --daemon "$@" 2>/dev/null &
+    echo "-- emacs daemon started"
+else
+    echo "-- emacs daemon already running"
+fi

@@ -71,7 +71,7 @@ export TERM=rxvt-unicode-256color
 
 # -- paths ----------------------------------------------------------------------
 export PKG_CONFIG_PATH="$DIR_LOCAL/lib/pkgconfig"
-export GOPATH="$STACKROT/.go"
+export GOPATH="$STACKROOT/.go"
 export PATH="$GOPATH/bin:$PATH"
 
 export PATH="$DIR_ANACONDA/bin:$PATH"
@@ -98,7 +98,7 @@ export MLOCATEDBS="$HOME/.updatedb/system.db:$HOME/.updatedb/apodius.db"
 export PYTHONPATH="$DIR_LOCAL/lib/python:$PYTHONPATH"
 
 # make libraries in /lib folder in $DIR_LOCAL useable (NOTE: not propagating to shells...)
-export LD_LIBRARY_PATH="$DIR_LOCAL/lib:$LD_LIBRARY_PATH"
+# export LD_LIBRARY_PATH="$DIR_LOCAL/lib:$LD_LIBRARY_PATH"
 
 # -- node/npm
 NPM_PACKAGES="${HOME}/.npm-packages"

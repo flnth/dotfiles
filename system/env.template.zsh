@@ -57,7 +57,6 @@ export GUIX_LOCPATH="$GUIX_PROFILE/lib/locale"
 export GI_TYPELIB_PATH="$GUIX_PROFILE/lib/girepository-1.0"
 export PYTHONPATH="$GUIX_PROFILE/lib/python3.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
 export PYTHONPATH="$GUIX_PROFILE/lib/python2.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
-export GIT_EXEC_PATH="$GUIX_PROFILE/libexec/git-core"
 export TERMINFO_DIRS="$GUIX_PROFILE/share/terminfo${TERMINFO_DIRS:+:}$TERMINFO_DIRS"
 export GUIX_GTK3_PATH="$GUIX_PROFILE/lib/gtk-3.0${GUIX_GTK3_PATH:+:}$GUIX_GTK3_PATH"
 

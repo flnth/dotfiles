@@ -22,7 +22,6 @@ cmake
 xmonad
 
 # misc
-git
 libsecret
 gnupg
 redshift

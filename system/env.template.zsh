@@ -85,7 +85,7 @@ export MANPATH="$DIR_LOCAL/man:$DIR_LOCAL/share/man:$DIR_SYSTEM/doc/man:$MANPATH
 export MANWIDTH=100
 
 # configuration
-export ZDOTDIR="$DIR_SYSTEM/terminal/zdotdir"  # NOTE: new:  set to ~
+export ZDOTDIR="$HOME"
 
 # mlocate databases
 export MLOCATEPNAMES="build .emacs.d"

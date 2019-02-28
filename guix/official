@@ -15,6 +15,9 @@ fasd
 pcre
 pcre2
 
+# dev
+cmake
+
 # wm
 xmonad
 

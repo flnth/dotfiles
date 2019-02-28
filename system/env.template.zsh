@@ -5,7 +5,7 @@ export env_set=1
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
-export STACKROOT='$HOME'
+export STACKROOT="$HOME"
 export LOC="home" # work
 export HOSTNAME=$HOST
 

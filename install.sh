@@ -66,11 +66,27 @@ echo_ "Installing other binaries..."
 echo "installing fzf..."
 go get -u github.com/junegunn/fzf
 
+# xmonadctl
 echo "building/installing xmonadctl"
 cd x && ghc --make xmonadctl.hs && rm {xmonadctl.o,xmonadctl.hi} && \
 mv xmonadctl ../bin
 cd ..
 
+# ycmd
+echo "building/installing xmonadctl"
+rev="6d8ddd5d6b5b9c2f885cfd5e589231d30d3c7360"
+
+[[ ! -d "$STACKROOT/opt" ]] && mkdir "$STACKROOT/opt"
+cd "$STACKROOT/opt"
+git clone https://github.com/Valloric/ycmd.git
+cd ycmd
+git checkout $rev
+git submodule update --init --recursive
+python3 build.py --clang-completer
+# TODO: ycmd directories in emacs, maybe even put into path
+
+
+echo "\n"
 #█▓▒░ dotfiles
 
 # gitconfig

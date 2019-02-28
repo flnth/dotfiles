@@ -1,0 +1,34 @@
+#!/bin/zsh
+
+
+# screensaver
+xscreensaver -no-splash &
+
+# Set background image
+# hsetroot -extend $DIR_SYSTEM/xmonad/assets/annular_eclipse2.jpg
+
+# fix x cursor
+xsetroot -cursor_name left_pr
+
+# Start udiskie to handle media
+udiskie &
+
+# network-manager applet
+if [ -x /usr/bin/nm-applet ] ; then
+   nm-applet --sm-disable &
+fi
+
+# redshift-gtk
+if [ "$LOC" = "home" ];
+then
+    redshift -b 1.0:0.75 -t 5500:3500 -g 0.9:0.9:1.0 &
+	#/home/fthevissen/.local/bin/taffybar
+	#nextcloud &
+	urxvt &
+else
+    redshift -b 1.0:1.0  -t 5500:4000 -g 1.0:1.0:1.0 &
+    cd ~/.config/taffybar && stack exec taffybar &
+fi
+
+/usr/bin/shutter --min_at_startup &  # TODO: path to shutter?
+mail-notification &

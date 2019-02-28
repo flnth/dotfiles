@@ -6,18 +6,19 @@ table(){ printf "%-10s %-30s\n" $1 $2 }
 #█▓▒░ environment
 
 echo_ "Checking environment..."
+env_file=env.$(hostname).zsh
 if [[ -z $STACKROOT ]]; then
 	read -q "response?...not set, configure? (y/n)"
 	echo "\n"
 	if [[ $response == (y|yes|Y) ]]; then
-		target=env.$(hostname).zsh
-		cp system/env.template.zsh $target
-		sed -i -e "s/<TEMPLATE>/$(hostname)/g" $target
-		vim $target
-		source $target
+		cp system/env.template.zsh system/$env_file
+		sed -i -e "s/<TEMPLATE>/$(hostname)/g" $env_file
+		vim system/$env_file
+		git add system/$env_file
 	else
 		exit
 	fi
+	source system/$env_file
 fi
 
 table "  STACKROOT: " $STACKROOT

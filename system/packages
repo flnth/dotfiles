@@ -5,6 +5,10 @@ console-data
 console-setup
 
 # misc
+shutter
+hsetroot
+
+# dev
 git
 vim
 

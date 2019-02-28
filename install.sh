@@ -98,7 +98,7 @@ if [[ ! -f "git/.gitconfig" ]]; then
 fi
 
 # symlinks
-dirs="x tmux git"
+dirs="x tmux git fonts"
 echo_ "Symlinking dotfiles..."
 
 echo "...zsh -> $ZDOTDIR"

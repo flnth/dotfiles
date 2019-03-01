@@ -1,8 +1,9 @@
 # -*- sh -*-
 
-# keyboard setup
+# periphery
 console-data
 console-setup
+xinput
 
 # misc
 stow

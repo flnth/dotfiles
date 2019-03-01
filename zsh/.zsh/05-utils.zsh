@@ -1,17 +1,24 @@
 
 #█▓▒░ utils:   functions and aliases
-for util (utils/*.zsh) source $utils
+cur_dir=$(dirname $(readlink -f "$0"))
+#for alias in $cur_dir/alias/*.zsh; do source $cur_dir/alias/$alias ; done
 
-system_dep_utils="utils/zsh.$(hostname).utils"
-[[ -f $system_dep_utils]] && source $system_dep_utils
+#for f in $cur_dir/alias/*.zsh; do
+#	source $f
+#done
 
-source fasd.zsh
-source fzf-key-bindings.zsh
+
+
+#system_dep_utils="utils/zsh.$(hostname).utils"
+#[[ -f $system_dep_utils]] && source $system_dep_utils
+
+#source $cur_dir/fasd.zsh
+#source $cur_dir/fzf-key-bindings.zsh
 
 # load host-specific aliases
-if [[ -f "utils/alias.$(uname -n).zsh" ]]; then
-	source "utils/alias.$(uname -n).zsh"
-fi
+#if [[ -f "alias/alias.$(uname -n).zsh" ]]; then
+#	source "utils/alias.$(uname -n).zsh"
+#fi
 
 # ----------------------------------------------------------
 # TODO:  sort below into alias / functions
@@ -778,8 +785,8 @@ fag() {
   local __selected=$(rg -n --column --color always "$@" 2> /dev/null | fzf --multi --ansi --preview="$__preview_cmd" --preview-window=down --expect=ctrl-o,ctrl-e,ctrl-s,ctrl-b,ctrl-l,ctrl-r)
 }
 
-# zsh-interactive-cd plugin
-source $DIR_SYSTEM/terminal/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
+# zsh-interactive-cd plugin (TODO: need?)
+#source $DIR_SYSTEM/terminal/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 
 #  *** fshow - git commit browser
 # http://junegunn.kr/2015/03/browsing-git-commits-with-fzf/

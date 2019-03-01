@@ -21,11 +21,18 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/system:$PATH"
 fi
 
+env="$HOME/.env.$(uname -n).sh"
+if [ -z $env_set ] && [ -e $env ]; then
+	# TODO: lightweight configuration for when STACKROOT is not available, i.e.
+	# on a foreign localstorage
+	. $env
+fi
+
 # keyboard setup
-if [[ -x /bin/loadkeys && $(find /bin/loadkeys -perm -0001) ]]; then
+if [ -x `which loadkeys` ] && [ $(find `which loadkeys` -perm -0001) ]; then
 	# load uk key layout, put escape on capslock
-	/bin/loadkeys uk
-	/bin/loadkeys <<EOF
+	loadkeys uk
+	loadkeys <<EOF
 	keymaps 0-15
 	keycode 58 = Escape
 	keycode 1 = Escape
@@ -34,25 +41,18 @@ else
 	  echo "Couldn't set keyboard layout - setuid bit not set on /bin/loadkeys ?"
 fi
 
-env="$HOME/.env.$(uname -n).sh"
-if [ -z $env_set ] && [ -e $env ]; then
-	# TODO: lightweight configuration for when STACKROOT is not available, i.e.
-	# on a foreign localstorage
-	source $env
-fi
-
 # gpg-agent
-[ ! -z $GPGAGENT ] && \
-	$GPGAGENT --daemon --enable-ssh-support \
-			  --write-env-file "$STACKROOT/.gpg-agent-info" >& /dev/null
+#[ ! -z $GPGAGENT ] && \
+#	$GPGAGENT --daemon --enable-ssh-support \
+#			  --write-env-file "$STACKROOT/.gpg-agent-info" >& /dev/null
 
 # java fix
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # emacs daemon
-[ ! -z $DIR_SYSTEM ] && "$DIR_SYSTEM/emacsd"
+[ ! -z $DIR_SYSTEM ] && [ -f "$DIR_SYSTEM/emacsd" ] && "$DIR_SYSTEM/emacsd"
 
 # owncloud
-if [ "$LOC" = "home" ] ; then
+if [ "$LOC" = "home" ] && [ $(command -v owncloud) ] ; then
     owncloud &
 fi

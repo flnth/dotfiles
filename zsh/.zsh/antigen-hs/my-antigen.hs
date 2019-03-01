@@ -21,6 +21,7 @@ bundles =
   , bundle "willghatch/zsh-hooks"
   , bundle "zsh-users/zsh-syntax-highlighting"
   , bundle "zsh-users/zsh-history-substring-search"
+  , bundle "zdharma/zsh-diff-so-fancy"
   ]
 
 config = defaultConfig { plugins = bundles }

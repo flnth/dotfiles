@@ -253,7 +253,7 @@ Xft.decorative:	0
 Xft.embolden:	false
 Xft.hinting:	true
 Xft.hintstyle:	hintslight
-Xft.lcdfilter:	lcddefault
+Xft.lcdfilter:	lcdlight
 Xft.rgba:	rgb
 rofi.color-active:	#393939, #268bd2, #393939, #268bd2, #205171
 rofi.color-enabled:	true

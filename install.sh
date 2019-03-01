@@ -67,20 +67,27 @@ echo_ "Installing other binaries..."
 
 [[ ! -d "$STACKROOT/opt" ]] && mkdir "$STACKROOT/opt"
 
+# link $STACKROOT/opt -> $HOME/opt
+if [[ ! -e $HOME/opt ]]; then
+	[[ -L $HOME/opt ]] && rm $HOME/opt  # invalid symlink
+	$( cd $HOME && ln -s $STACKROOT/opt opt)
+fi
+
 # urxvt
 echo "installing urxvt..."
 if [[ ! $(command -f urxvt) ]] ; then
 	cd $STACKROOT/opt
 	git clone https://github.com/flnth/rxvt-unicode.git urxvt
 	cd urxvt
+	rm -rf bin
 	mkdir bin
 	./configure --enable-frills --enable-256-color --enable-unicode3 --enable-xft --enable-font-styles --enable-wide-glyphs --enable-iso14755
 	make -j4 && \
 		cd bin && \
-		rm * && \
 		ln -s ../src/rxvt urxvt && \
 		ln -s ../src/rxvtc urxvtc && \
 		ln -s ../src/rxvtd urxvtd
+
 fi
 
 # fzf

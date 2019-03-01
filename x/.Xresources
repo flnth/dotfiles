@@ -58,6 +58,9 @@ URxvt.intensityStyles: true
 
 URxvt.preeditType:Root
 
+
+!URxvt.font:          xft:CodeNewRoman NF:pixelsize=14:style=Book
+
 URxvt.font:          xft:CodeNewRoman NF:pixelsize=14:style=Book,xft:file\-icons:pixelsize=10
 URxvt*boldFont:      xft:CodeNewRoman NF:pixelsize=14:style=Bold,xft:file\-icons:pixelsize=10
 URxvt*italicFont:    xft:CodeNewRoman NF:pixelsize=14:style=Italic,xft:file\-icons:pixelsize=10
@@ -68,8 +71,8 @@ URxvt*boldItalicFont:xft:CodeNewRoman NF:pixelsize=14:style=Italic,xft:file\-ico
 
 URxvt*borderless:      1
 URxvt*buffered:        true
-URxvt.cursorBlink: 		 false
-URxvt.visualBell:      true
+URxvt.cursorBlink:     false
+URxvt.visualBell:      false
 URxvt*cursorUnderline: 0
 URxvt*depth:           32
 URxvt*transparent:     0
@@ -223,10 +226,10 @@ URxvt.kuake.pos_x: 0
 
 URxvt.geometry: 140x20
 
-URxvt.perl-lib:	/home/fthevissen/system/urxvt/perl_ext
-URxvt*perl-lib:	/home/fthevissen/system/urxvt/perl_ext
-URxvt.path: /home/fthevissen/system/urxvt/perl_ext
-URxvt*path: /home/fthevissen/system/urxvt/perl_ext
+URxvt.perl-lib:	/home/fthevissen/opt/urxvt/perl_inc
+URxvt*perl-lib:	/home/fthevissen/opt/urxvt/perl_inc
+URxvt.path: /home/fthevissen/opt/urxvt/perl_inc
+URxvt*path: /home/fthevissen/opt/urxvt/perl_inc
 URxvt.secondaryScreen:	true
 URxvt.secondaryWheel:	  true
 URxvt*secondaryScroll:	false
@@ -249,7 +252,7 @@ Xft.autohint:	false
 Xft.decorative:	0
 Xft.embolden:	false
 Xft.hinting:	true
-Xft.hintstyle:	hintfull
+Xft.hintstyle:	hintslight
 Xft.lcdfilter:	lcddefault
 Xft.rgba:	rgb
 rofi.color-active:	#393939, #268bd2, #393939, #268bd2, #205171

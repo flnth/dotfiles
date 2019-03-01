@@ -58,10 +58,10 @@ URxvt.intensityStyles: true
 
 URxvt.preeditType:Root
 
-URxvt.font:          xft:CodeNewRoman Nerd Font:pixelsize=14:style=Book,xft:file\-icons:pixelsize=10
-URxvt*boldFont:      xft:CodeNewRoman Nerd Font:pixelsize=14:style=Bold,xft:file\-icons:pixelsize=10
-URxvt*italicFont:    xft:CodeNewRoman Nerd Font:pixelsize=14:style=Italic,xft:file\-icons:pixelsize=10
-URxvt*boldItalicFont:xft:CodeNewRoman Nerd Font:pixelsize=14:style=Italic,xft:file\-icons:pixelsize=10
+URxvt.font:          xft:CodeNewRoman NF:pixelsize=14:style=Book,xft:file\-icons:pixelsize=10
+URxvt*boldFont:      xft:CodeNewRoman NF:pixelsize=14:style=Bold,xft:file\-icons:pixelsize=10
+URxvt*italicFont:    xft:CodeNewRoman NF:pixelsize=14:style=Italic,xft:file\-icons:pixelsize=10
+URxvt*boldItalicFont:xft:CodeNewRoman NF:pixelsize=14:style=Italic,xft:file\-icons:pixelsize=10
 
 
 !URxvt

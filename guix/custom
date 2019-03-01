@@ -1,6 +1,9 @@
-# -*- sh -*-
+#
+#-*- sh -*-
 
 emacs-from-source
 mu-from-source
 authinfo
-# urxvt
+
+# mainly for proper terminfos
+urxvt

@@ -65,6 +65,24 @@ echo "\n"
 
 echo_ "Installing other binaries..."
 
+[[ ! -d "$STACKROOT/opt" ]] && mkdir "$STACKROOT/opt"
+
+# urxvt
+echo "installing urxvt..."
+if [[ ! $(command -f urxvt) ]] ; then
+	cd $STACKROOT/opt
+	git clone https://github.com/flnth/rxvt-unicode.git urxvt
+	cd urxvt
+	mkdir bin
+	./configure --enable-frills --enable-256-color --enable-unicode3 --enable-xft --enable-font-styles --enable-wide-glyphs --enable-iso14755
+	make -j4 && \
+		cd bin && \
+		rm * && \
+		ln -s ../src/rxvt urxvt && \
+		ln -s ../src/rxvtc urxvtc && \
+		ln -s ../src/rxvtd urxvtd
+fi
+
 # fzf
 echo "installing fzf..."
 [[ ! -f $GOPATH/bin/fzf ]] && go get -u github.com/junegunn/fzf
@@ -79,7 +97,6 @@ cd ..
 echo "installing ycmd..."
 rev="6d8ddd5d6b5b9c2f885cfd5e589231d30d3c7360"
 
-[[ ! -d "$STACKROOT/opt" ]] && mkdir "$STACKROOT/opt"
 if [[ ! -d "$STACKROOT/opt/ycmd" ]]; then
 	cd "$STACKROOT/opt"
 	git clone https://github.com/Valloric/ycmd.git

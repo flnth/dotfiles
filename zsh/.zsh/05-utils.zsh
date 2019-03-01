@@ -189,7 +189,7 @@ alias qtcreator="LD_PRELOAD=$DIR_SYSTEM/qt5noblink.so $DIR_QTCREATOR/bin/qtcreat
 alias pycharm="$DIR_PYCHARM/pycharm.sh"
 
 #  ** coloring
-cur_dir=$( dirname $( dirname `readlink -f "$0"`  ))
+cur_dir=$( dirname `readlink -f "$0"`  )
 export source_highlight_style_file=$cur_dir/source-highlight.style
 ccat()
 {

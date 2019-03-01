@@ -14,6 +14,9 @@ hsetroot
 git
 vim
 
+# libs
+libperl-dev
+
 # haskell
 ghc
 cabal-install

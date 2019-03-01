@@ -48,7 +48,8 @@ ZSH_HIGHLIGHT_STYLES[path]=fg='12'
 # zle_highlight=(region:bg=235 isearch:fg=9 suffix:fg=12 special:fg=9 paste:fg=13 )
 
 # dircolors.moonshine
-eval `dircolors ls.colors`
+cur_dir=$(dirname $(readlink -f "$0"))
+eval `dircolors $cur_dir/ls.colors`
 
 #  * man-pages and less
 export LESS_TERMCAP_mb=$(printf '\e[01;31m') # enter blinking mode

@@ -1,5 +1,5 @@
 
 #█▓▒░ load configs
-for config (.zsh/*.zsh) source $config
+for config in $ZDOTDIR/.zsh/*.zsh; do source $config; done
 
 

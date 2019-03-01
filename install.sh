@@ -114,6 +114,10 @@ if [[ ! -d "$STACKROOT/opt/ycmd" ]]; then
 fi
 # TODO: ycmd directories in emacs, maybe even put into path
 
+# ripgrep, fd
+echo "installing fd,ripgrep..."
+cargo install fd
+cargo install ripgrep
 
 echo "\n"
 #█▓▒░ dotfiles

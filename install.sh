@@ -6,23 +6,25 @@ table(){ printf "%-10s %-30s\n" $1 $2 }
 #█▓▒░ environment
 
 echo_ "Checking environment..."
-env_file=env.$(hostname).zsh
-if [[ -z $STACKROOT ]]; then
-	read -q "response?...not set, configure? (y/n)"
+env_file=.env.$(hostname).sh
+if [[ -z $STACKROOT ]] || [[ ! -e "$HOME/$env_file" ]]; then
+	read -q "response?...not set or existant, configure? (y/n)"
 	echo "\n"
 	if [[ $response == (y|yes|Y) ]]; then
-		cp system/env.template.zsh system/$env_file
-		sed -i -e "s/<TEMPLATE>/$(hostname)/g" $env_file
+		cp system/env.template.sh system/$env_file
+		sed -i -e "s/<TEMPLATE>/$(hostname)/g" system/$env_file
 		vim system/$env_file
 		git add system/$env_file
 	else
 		exit
 	fi
 	source system/$env_file
+	echo "gopath:  $GOPATH"
 fi
 
 table "  STACKROOT: " $STACKROOT
 table "  ZDOTDIR: "   $ZDOTDIR
+table "  GOPATH: "   $GOPATH
 
 echo "\n"
 read -q "response?   continue? (y/n) "
@@ -65,25 +67,27 @@ echo_ "Installing other binaries..."
 
 # fzf
 echo "installing fzf..."
-go get -u github.com/junegunn/fzf
+[[ ! -f $GOPATH/bin/fzf ]] && go get -u github.com/junegunn/fzf
 
 # xmonadctl
-echo "building/installing xmonadctl"
+echo "building xmonadctl..."
 cd x && ghc --make xmonadctl.hs && rm {xmonadctl.o,xmonadctl.hi} && \
 mv xmonadctl ../bin
 cd ..
 
 # ycmd
-echo "building/installing xmonadctl"
+echo "installing ycmd..."
 rev="6d8ddd5d6b5b9c2f885cfd5e589231d30d3c7360"
 
 [[ ! -d "$STACKROOT/opt" ]] && mkdir "$STACKROOT/opt"
-cd "$STACKROOT/opt"
-git clone https://github.com/Valloric/ycmd.git
-cd ycmd
-git checkout $rev
-git submodule update --init --recursive
-python3 build.py --clang-completer
+if [[ ! -d "$STACKROOT/opt/ycmd" ]]; then
+	cd "$STACKROOT/opt"
+	git clone https://github.com/Valloric/ycmd.git
+	cd ycmd
+	git checkout $rev
+	git submodule update --init --recursive
+	python3 build.py --clang-completer
+fi
 # TODO: ycmd directories in emacs, maybe even put into path
 
 
@@ -102,10 +106,10 @@ fi
 dirs="x tmux git fonts"
 echo_ "Symlinking dotfiles..."
 
-echo "...zsh -> $ZDOTDIR"
+echo "...zsh into $ZDOTDIR"
 # stow zsh -t $ZDOTDIR  # TODO        uncomment
 
 echo "...($dirs)"
 for dir in $dirs; do
-	stow $dir -t /tmp
+	stow $dir -t $HOME
 done

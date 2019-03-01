@@ -9,6 +9,10 @@
 #   - path to target file
 # # --------------------------------------------------------
 
+usage(){ echo "usage:   create-gitconfig.sh template target" }
+[[ "$#" -ne 2 ]] && usage && exit 1
+
+
 cur_dir=`pwd`
 template=$1
 target=$2

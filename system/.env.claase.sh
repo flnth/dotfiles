@@ -75,9 +75,9 @@ export PATH="$GOPATH/bin:$PATH"
 
 export PATH="$DIR_ANACONDA/bin:$PATH"
 export PATH="$DIR_QT/gcc_64/bin:$PATH"
-export PATH="$HOME/software/local/bin:$PATH"
+#export PATH="$HOME/software/local/bin:$PATH"
 export PATH="$NPM_PACKAGES/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
+#export PATH="$HOME/.local/bin:$PATH"
 export PATH="$DIR_LOCAL/lib/python/bin:$PATH"
 
 export MANPATH="$DIR_LOCAL/man:$DIR_LOCAL/share/man:$DIR_SYSTEM/doc/man:$MANPATH"

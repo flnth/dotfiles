@@ -134,7 +134,7 @@ alias got='ps awx | grep'
 
 
 
-alias urxvt='$DIR_LOCAL/bin/urxvt'
+# alias urxvt='$DIR_LOCAL/bin/urxvt'
 # alias urxvt='$DIR_LOCAL/bin/urxvt -pe kuake'          # ... starting tmux from
                                                       # the beginning does weird
                                                       # things, aparently

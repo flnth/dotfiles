@@ -112,6 +112,11 @@ PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
 PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 
+# -- urxvt
+# TODO:  if this exists...
+export PATH="$STACKROOT/opt/urxvt/bin":$PATH
+export PERL5LIB="$STACKROOT/opt/urxvt/perl_inc":$PERL5LIB
+
 
 # -- gpgagent
 export GPGAGENT=/usr/bin/gpg-agent

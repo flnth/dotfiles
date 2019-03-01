@@ -106,10 +106,11 @@ fi
 dirs="x tmux git fonts"
 echo_ "Symlinking dotfiles..."
 
-echo "...zsh into $ZDOTDIR"
-# stow zsh -t $ZDOTDIR  # TODO        uncomment
+#echo "...zsh into $ZDOTDIR"
+# stow zsh -t $ZDOTDIR  # TODO: ZDOTDIR != $HOME, maybe?        
 
 echo "...($dirs)"
 for dir in $dirs; do
+	# TODO:  what if some files already exist...? check beforehand? output error?
 	stow $dir -t $HOME
 done

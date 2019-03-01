@@ -46,7 +46,7 @@
 		(hash "0ymsmqj77mr08x0g2k84ywarwy9zs105mm3z72fqc493z6wcaqz4"))
 	(package
 	 (name "urxvt")
-	 (version "9.22c")
+	 (version "9.22d")
 	 (source (origin
 			  (method git-fetch)
 			  (uri (git-reference
@@ -57,9 +57,7 @@
 	 (arguments
 	  `(#:configure-flags '("--enable-frills"
 							"--enable-256-color"
-							"--enable-unicode3"
 							"--enable-xft"
-							"--enable-font-styles"
 							"--enable-wide-glyphs"
 							"--enable-iso14755")
 						  ;; This sets the destination when installing the necessary terminal

@@ -1,6 +1,3 @@
-[submodule "share/share/priv"]
-	path = share/share/priv
-	url = https://efth@bitbucket.org/efth/share-priv.git
 [submodule "etc/etc/priv"]
 	path = etc/etc/priv
 	url = https://efth@bitbucket.org/efth/priv.git

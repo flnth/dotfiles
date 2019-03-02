@@ -43,6 +43,9 @@ echo_ "Installing system packages..."
 [[ $(uname -a) == *"Ubuntu"* ]] && sudo apt install linux-lowlatency
 [[ $(uname -a) == *"Debian"* ]] && sudo apt install linux-image-rt-amd64
 
+# symlinks
+
+
 echo "\n"
 #█▓▒░ guix
 
@@ -144,3 +147,21 @@ for dir in $dirs; do
 	# TODO:  what if some files already exist...? check beforehand? output error?
 	stow $dir -t $HOME
 done
+
+echo "\n"
+#█▓▒░ emacs
+echo_ "Emacs configuration..."
+cd $HOME
+rm -rf .emacs.d
+https://github.com/flnth/emacs.d.git .emacs.d
+cd .emacs.d
+git submodule update --init --recursive
+ln -s .spacemacs 
+
+
+
+
+
+
+
+

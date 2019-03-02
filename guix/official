@@ -3,10 +3,11 @@
 glibc-locales
 emacs-minimal
 
-# languages
+# dev
 python2
 python
 go
+cmake
 
 # shell
 tmux
@@ -15,9 +16,7 @@ fasd
 pcre
 pcre2
 source-highlight
-
-# dev
-cmake
+ranger
 
 # wm
 xmonad

@@ -10,6 +10,7 @@ stow
 shutter
 hsetroot
 highlight
+pandoc
 
 # dev
 git
@@ -23,3 +24,11 @@ libperl-dev
 ghc
 cabal-install
 libghc-x11-dev
+
+# vm/containers
+docker
+vagrant
+virtualbox
+vmware-player
+
+

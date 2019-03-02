@@ -1,0 +1,5 @@
+# ignore templates
+.*\.template.*
+
+# ignore all non-dotfiles
+^((?!^\.).)*$

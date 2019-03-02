@@ -594,7 +594,8 @@ fzf-ps()
 														 | sed "s/__PREVIEW_HALF_HEIGHT/$__prev_half_height/g"
 		  )
 	# echo "escaped_pattern: $__escaped_pattern"
-	local __rg_ignore_file=$DIR_SYSTEM/rg_ignore
+	# TODO:  if no ignore file found, ignore statement
+	local __rg_ignore_file=$STACKROOT/etc/ripgrep_ignore
 
 	out=($(rg -n --column --no-heading --color always --ignore-file $__rg_ignore_file $__pattern ./ 2> /dev/null | fzf1 --height 0% --ansi --expect=enter,alt-d --preview="$__preview_cmd" --preview-window=$__prev_window --color bg+:238,fg+:254))
 	out=(${=out})
@@ -630,7 +631,7 @@ fzf-pS()
 														 | sed "s/__PREVIEW_HALF_HEIGHT/$__prev_half_height/g"
 		  )
 	# echo "escaped_pattern: $__escaped_pattern"
-	local __rg_ignore_file=$DIR_SYSTEM/rg_ignore
+	local __rg_ignore_file=$STACKROOT/etc/ripgrep_ignore
 
 	out=($(rg -n --column --no-heading --color always --ignore-file $__rg_ignore_file $__pattern ./ 2> /dev/null | fzf1 --height 0% --ansi --expect=enter,alt-d --preview="$__preview_cmd" --preview-window=$__prev_window --color bg+:238,fg+:254))
 	out=(${=out})

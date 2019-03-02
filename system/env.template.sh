@@ -31,7 +31,8 @@ export STACK_ROOT="$HOME/.stack"
 
 # -- software ------------------------------------------------------------------
 export DIR_LOCAL="$STACKROOT/software/local"
-export DIR_EMACSD="$DIR_SYSTEM/.emacs.d/"
+export DIR_EMACSD="$STACKROOT/.emacs.d/"
+# export SPACEMACSDIR="$DIR_EMACSD/spacemacs"
 export DIR_QT="$STACKROOT/software/Qt/5.11.1"
 export BOOST_ROOT="$STACKROOT/libraries/boost_1_66_0"
 
@@ -80,7 +81,7 @@ export PATH="$NPM_PACKAGES/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$DIR_LOCAL/lib/python/bin:$PATH"
 
-export MANPATH="$DIR_LOCAL/man:$DIR_LOCAL/share/man:$DIR_SYSTEM/doc/man:$MANPATH"
+export MANPATH="$STACKROOT/share/man:$MANPATH"
 export MANWIDTH=100
 
 # configuration

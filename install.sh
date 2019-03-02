@@ -137,6 +137,8 @@ echo_ "Symlinking dotfiles..."
 #echo "...zsh into $ZDOTDIR"
 # stow zsh -t $ZDOTDIR  # TODO: ZDOTDIR != $HOME, maybe?        
 
+[[ -f etc/etc/priv/.authinfo.gpg ]] && ln -s etc/etc/priv/.authinfo.gpg ~/.authinfo.gpg
+
 echo "...($dirs)"
 for dir in $dirs; do
 	# TODO:  what if some files already exist...? check beforehand? output error?

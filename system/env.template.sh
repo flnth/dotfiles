@@ -22,7 +22,7 @@ export DIR_LIBRARY="$HOME/cloud"
 export DIR_CODEARCHIVE="$STACKROOT/share/code"
 export DIR_DOTFILES="$STACKROOT/.cfg"
 export DIR_NOTES="$HOME/cloud/82_Notes"
-export DIR_ORG="$HOME/cloud/82_Notes/org"
+export DIR_ORG="$STACKROOT/share/doc"
 
 # -- gui
 export TAFFYBAR_MONITOR=1

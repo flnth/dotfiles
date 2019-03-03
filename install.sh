@@ -139,10 +139,10 @@ echo "\n"
 #█▓▒░ directory structure
 echo_ "Creating directories, cloning repositories..."
 
-mkdir $STACKROOT/share
-cd $STACKROOT/share
+cd $STACKROOT
+mkdir share
 git clone https://etft@bitbucket.org/efth/codearchive.git code
-
+git clone https://efth@bitbucket.org/efth/org.git doc
 
 echo "\n"
 #█▓▒░ dotfiles

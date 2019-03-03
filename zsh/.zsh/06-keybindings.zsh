@@ -229,6 +229,9 @@ tmux-scroll-up() { tmux copy-mode; tmux send-keys -X -N 5 scroll-up }; zle -N tm
 bindkey -M viins '^u' backward-kill-line
 bindkey -M vicmd '^u' tmux-scroll-up
 
+tmux-respawn-pane() { [[ -n "$TMUX" ]] && tmux run-shell 'CC="#{pane_current_path}"; tmux respawn-pane -k "cd $CC; zsh"'  }
+bindkey -M vicmd '^[r' tmux-respawn-pane
+
 # bindkey -M vicmd ' ps' ag or something like it?
 # bindkey -M vicmd 'gb' frecent list --> emacs?
 

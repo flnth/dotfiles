@@ -143,10 +143,10 @@ echo "\n"
 #█▓▒░ directory structure
 echo_ "Creating directories, cloning repositories..."
 
-cd $STACKROOT
-mkdir share
-git clone https://etft@bitbucket.org/efth/codearchive.git code
-git clone https://efth@bitbucket.org/efth/org.git doc
+mkdir $STACKROOT/share
+cd $STACKROOT/share
+[[ ! -d code ]] && git clone https://etft@bitbucket.org/efth/codearchive.git code
+[[ ! -d doc ]] && git clone https://efth@bitbucket.org/efth/org.git doc
 
 echo "\n"
 #█▓▒░ dotfiles
@@ -162,15 +162,16 @@ fi
 
 # symlinks
 echo_ "Symlinking dotfiles..."
-dirs="x tmux git fonts highlight share system tmux xdg zsh git"
+dirs="x tmux git fonts highlight share system tmux xdg zsh git etc"
 
 #echo "...zsh into $ZDOTDIR"
 # stow zsh -t $ZDOTDIR  # TODO: ZDOTDIR != $HOME, maybe?
 
-[[ -f etc/etc/priv/.authinfo.gpg ]] && ln -s etc/etc/priv/.authinfo.gpg ~/.authinfo.gpg
+cd $STACKROOT/.dotfiles
+[[ -e ~/.authinfo.gpg ]] && rm ~/.authinfo.gpg
+[[ -f etc/etc/priv/.authinfo.gpg ]] && ln -s $STACKROOT/.dotfiles/etc/etc/priv/.authinfo.gpg ~/.authinfo.gpg
 
 echo "...($dirs)"
-cd $STACKROOT/.dotfiles
 for dir in $dirs; do
 	# TODO:  what if some files already exist...? check beforehand? output error?
 	stow $dir -t $HOME

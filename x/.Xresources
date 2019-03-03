@@ -61,10 +61,10 @@ URxvt.preeditType:Root
 
 !URxvt.font:          xft:CodeNewRoman NF:pixelsize=14:style=Book
 
-URxvt.font:          xft:CodeNewRoman NF:pixelsize=14:style=Book,xft:file\-icons:pixelsize=10
-URxvt*boldFont:      xft:CodeNewRoman NF:pixelsize=14:style=Bold,xft:file\-icons:pixelsize=10
-URxvt*italicFont:    xft:CodeNewRoman NF:pixelsize=14:style=Italic,xft:file\-icons:pixelsize=10
-URxvt*boldItalicFont:xft:CodeNewRoman NF:pixelsize=14:style=Italic,xft:file\-icons:pixelsize=10
+URxvt.font:          xft:CodeNewRoman NF:pixelsize=13:style=Book,xft:file\-icons:pixelsize=9
+URxvt*boldFont:      xft:CodeNewRoman NF:pixelsize=13:style=Bold,xft:file\-icons:pixelsize=9
+URxvt*italicFont:    xft:CodeNewRoman NF:pixelsize=13:style=Italic,xft:file\-icons:pixelsize=9
+URxvt*boldItalicFont:xft:CodeNewRoman NF:pixelsize=13:style=Italic,xft:file\-icons:pixelsize=9
 
 
 !URxvt

@@ -5,12 +5,17 @@ console-data
 console-setup
 xinput
 
+# shell / x
+xsel
+xclip
+
 # misc
 stow
 shutter
 hsetroot
 highlight
 pandoc
+remmina
 
 # dev
 git

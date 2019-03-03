@@ -363,20 +363,21 @@ mScratchpads dir_system = [ NS "terminal" spawnTerm findTerm manageTerm
                           ]
 
   where
-    -- spawnTerm = dir_system ++ "/urxvtcd.sh" ++ " -name scratchterm -e emacsclient -nw --socket-name=/tmp/emacs1000/server"
-    spawnTerm = dir_system ++ "/emacsclient_gui -e '(set-frame-name \"scratchterm\")'"
-    findTerm  =  stringProperty "_NET_WM_NAME" =? "scratchterm"
+    spawnTerm = dir_system ++ "/urxvtcd.sh" ++ " -name scratchterm -e emacsclient -nw --socket-name=/tmp/emacs1000/server"
+    -- spawnTerm = dir_system ++ "/emacsclient_gui -e '(set-frame-name \"scratchterm\")'"
+    -- findTerm  =  stringProperty "_NET_WM_NAME" =? "scratchterm"
+    findTerm  =  resource =? "scratchterm"
     manageTerm = customFloating $ W.RationalRect l t w h
       where
         h = 0.5
         t = 0.1
         w = 0.5
         l = (1-w)/2
-
-    -- spawnErc = dir_system ++ "/urxvtcd.sh" ++ " -name scratcherc -e emacsclient -nw --socket-name=/tmp/emacs1000/server"
-    spawnErc = dir_system ++ "/emacsclient_gui -e '(+chat-new-frame \"scratcherc\")'"
+    spawnErc = dir_system ++ "/urxvtcd.sh" ++ " -name scratcherc -e emacsclient -nw --socket-name=/tmp/emacs1000/server"
+    -- spawnErc = dir_system ++ "/emacsclient_gui -e '(+chat-new-frame \"scratcherc\")'"
     -- findErc  = resource =? "scratcherc"
-    findErc  = stringProperty "_NET_WM_NAME" =? "scratcherc"
+    -- findErc  = stringProperty "_NET_WM_NAME" =? "scratcherc"
+    findErc  = resource =? "scratcherc"
     manageErc = customFloating $ W.RationalRect l t w h
       where
         h = 0.3

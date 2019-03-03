@@ -12,8 +12,6 @@ cmake
 tmux
 zsh
 fasd
-pcre
-pcre2
 source-highlight
 ranger
 

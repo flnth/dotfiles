@@ -138,7 +138,6 @@ zle     -N   fzf-history-widget
 bindkey '^R' fzf-history-widget
 bindkey -M vicmd '^R' fzf-history-widget
 
-
 #  ** tmux
 function tmux_copy_mode_down(){
 	tmux copy-mode

@@ -1,2 +1,2 @@
 #!/bin/zsh
-$DIR_LOCAL/bin/emacsclient -c --socket-name=/tmp/emacs1000/server $@
+emacsclient -c --socket-name=/tmp/emacs1000/server $@

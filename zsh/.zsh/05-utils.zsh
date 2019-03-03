@@ -27,7 +27,7 @@ cur_dir=$(dirname $(readlink -f "$0"))
 alias rsync='rsync -rzvvhP'
 
 # zeal
-alias zeal="$DIR_LOCAL/bin/zeal"
+# alias zeal="$DIR_LOCAL/bin/zeal"
 
 alias logout="kill -9 -1"
 
@@ -37,7 +37,7 @@ sudo_emacs()
 {
 	if [ $1 = "ee" ]; then
 		fpath=`pwd`/$2
-		$DIR_LOCAL/bin/emacsclient -nw --socket-name=/tmp/emacs1000/server -e "(find-file \"/sudo::$fpath\")"
+		emacsclient -nw --socket-name=/tmp/emacs1000/server -e "(find-file \"/sudo::$fpath\")"
 	else
 		sudo "$@"
 	fi
@@ -112,7 +112,7 @@ tmux_show_text()
 	tmux setw -g status-right $newtext
 }
 
-alias tmux='$DIR_LOCAL/bin/tmux'
+# alias tmux='$DIR_LOCAL/bin/tmux'
 alias tmuxn='tmux new-session -s $$'
 _trap_exit() { tmux kill-session -t $$ }
 trap _trap_exit EXIT
@@ -143,12 +143,12 @@ alias got='ps awx | grep'
 #alias emacs='$DIR_LOCAL/bin/emacs'
 # alias _emacsalias='$DIR_LOCAL/bin/emacsclient -nw --socket-name=/tmp/emacs1000/server'          # opens emacs right here
 #alias ee='emacsclient -nw'
-alias e='$DIR_LOCAL/bin/emacsclient --no-wait --socket-name=/tmp/emacs1000/server'     # opens file in emacs
-alias eg='$DIR_LOCAL/bin/emacsclient -c --socket-name=/tmp/emacs1000/server'          # open new GUI frame
+alias e='emacsclient --no-wait --socket-name=/tmp/emacs1000/server'     # opens file in emacs
+alias eg='emacsclient -c --socket-name=/tmp/emacs1000/server'          # open new GUI frame
 
 function _call_emacs()
 {
-	$DIR_LOCAL/bin/emacsclient -c -nw --socket-name=/tmp/emacs1000/server $@
+	emacsclient -c -nw --socket-name=/tmp/emacs1000/server $@
 }
 
 function ee
@@ -168,7 +168,7 @@ function ee
 
 
 cde() {
-	cd ${(Q)~$($DIR_LOCAL/bin/emacsclient -n --socket-name=/tmp/emacs1000/server -e '(with-current-buffer
+	cd ${(Q)~$(emacsclient -n --socket-name=/tmp/emacs1000/server -e '(with-current-buffer
 							   (window-buffer (selected-window))
 							   default-directory) ')}
 }
@@ -456,7 +456,7 @@ function checknotes(){
     then
         file=$(echo $ret | cut -d ":" -f1)
         linenum=$(echo $ret | cut -d ":" -f2)
-        $DIR_LOCAL/bin/emacsclient +$linenum "$notesdir/$file" -nw
+        emacsclient +$linenum "$notesdir/$file" -nw
     fi
 }
 
@@ -1086,7 +1086,7 @@ z.() {
 o() {
 	case $(xdg-mime query filetype $1) in
 		text*|application*script|application*x-yaml)
-			$DIR_LOCAL/bin/emacsclient -nw --socket-name=/tmp/emacs1000/server $1 && \
+			emacsclient -nw --socket-name=/tmp/emacs1000/server $1 && \
 				fasd -A $1 || return 1
 			;;
 		application*vnd*opendocument*|application*vnd*officedocument*)

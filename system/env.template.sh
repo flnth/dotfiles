@@ -9,6 +9,10 @@ export STACKROOT="$HOME"
 export LOC="home" # work
 export HOSTNAME="$HOST"
 
+# -- locale
+export LC_ALL=en_GB.UTF-8
+export LANG=en_GB.UTF-8
+
 # -- mail ----------------------------------------------------------------------
 export DIR_MAIL="$HOME/.mail"
 
@@ -21,13 +25,13 @@ export DIR_NOTES="$HOME/cloud/82_Notes"
 export DIR_ORG="$HOME/cloud/82_Notes/org"
 
 # -- gui
-export DIR_XMONAD="$HOME/system/xmonad"
 export TAFFYBAR_MONITOR=1
 
 export MOUSE_SPEED=-0.8
 
 # -- haskell
-export STACK_ROOT="$HOME/.stack"
+export STACK_ROOT="$STACKROOT/.stack"  # stack-internal
+export PATH="$STACKROOT/opt/stack:$PATH"
 
 # -- software ------------------------------------------------------------------
 export DIR_LOCAL="$STACKROOT/software/local"
@@ -45,6 +49,9 @@ export DIR_SUBLIME="$STACKROOT/software/sublime_text_3/"
 
 # todo: make it so that dirs can be commented out here (explicit checking before
 # usage below..!)
+
+# default linux configuration dir:
+export XDG_CONFIG_HOME=$HOME/.config
 
 export GUIX_PROFILE="$STACKROOT/.guix-profile"
 
@@ -104,7 +111,7 @@ export PYTHONPATH="$DIR_LOCAL/lib/python:$PYTHONPATH"
 NPM_PACKAGES="${HOME}/.npm-packages"
 # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
 #unset MANPATH # delete if you already modified MANPATH elsewhere in your config export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-export PATH="$NPM_PACKAGES/bin:$PATH"
+#export PATH="$NPM_PACKAGES/bin:$PATH"
 
 # -- perl
 PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;

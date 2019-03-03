@@ -3,11 +3,16 @@
 
 export env_set=1
 
+
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export STACKROOT="$HOME"
 export LOC="home" # work
 export HOSTNAME="$HOST"
+
+# -- locale
+export LC_ALL=en_GB.UTF-8 
+export LANG=en_GB.UTF-8
 
 # -- mail ----------------------------------------------------------------------
 export DIR_MAIL="$HOME/.mail"
@@ -21,17 +26,18 @@ export DIR_NOTES="$HOME/cloud/82_Notes"
 export DIR_ORG="$HOME/cloud/82_Notes/org"
 
 # -- gui
-export DIR_XMONAD="$HOME/system/xmonad"
+# export DIR_XMONAD="$HOME/system/xmonad"
 export TAFFYBAR_MONITOR=1
 
 export MOUSE_SPEED=-0.8
 
 # -- haskell
-export STACK_ROOT="$HOME/.stack"
+export STACK_ROOT="$STACKROOT/.stack"  # stack-internal
+export PATH="$STACKROOT/opt/stack:$PATH"
 
 # -- software ------------------------------------------------------------------
 export DIR_LOCAL="$STACKROOT/software/local"
-export DIR_EMACSD="$DIR_SYSTEM/.emacs.d/"
+export DIR_EMACSD="$STACKROOT/.emacs.d"
 export DIR_QT="$STACKROOT/software/Qt/5.11.1"
 export BOOST_ROOT="$STACKROOT/libraries/boost_1_66_0"
 
@@ -57,7 +63,7 @@ export GUIX_LOCPATH="$GUIX_PROFILE/lib/locale"
 #export GI_TYPELIB_PATH="$GUIX_PROFILE/lib/girepository-1.0"
 #export PYTHONPATH="$GUIX_PROFILE/lib/python3.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
 #export PYTHONPATH="$GUIX_PROFILE/lib/python2.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
-#export TERMINFO_DIRS="$GUIX_PROFILE/share/terminfo${TERMINFO_DIRS:+:}$TERMINFO_DIRS"
+export TERMINFO_DIRS="$GUIX_PROFILE/share/terminfo${TERMINFO_DIRS:+:}$TERMINFO_DIRS"
 #export GUIX_GTK3_PATH="$GUIX_PROFILE/lib/gtk-3.0${GUIX_GTK3_PATH:+:}$GUIX_GTK3_PATH"
 
 
@@ -73,12 +79,12 @@ export PKG_CONFIG_PATH="$DIR_LOCAL/lib/pkgconfig"
 export GOPATH="$STACKROOT/.go"
 export PATH="$GOPATH/bin:$PATH"
 
-export PATH="$DIR_ANACONDA/bin:$PATH"
+#export PATH="$DIR_ANACONDA/bin:$PATH"
 export PATH="$DIR_QT/gcc_64/bin:$PATH"
 #export PATH="$HOME/software/local/bin:$PATH"
-export PATH="$NPM_PACKAGES/bin:$PATH"
+#export PATH="$NPM_PACKAGES/bin:$PATH"
 #export PATH="$HOME/.local/bin:$PATH"
-export PATH="$DIR_LOCAL/lib/python/bin:$PATH"
+#export PATH="$DIR_LOCAL/lib/python/bin:$PATH"
 
 export MANPATH="$DIR_LOCAL/man:$DIR_LOCAL/share/man:$DIR_SYSTEM/doc/man:$MANPATH"
 export MANWIDTH=100
@@ -117,6 +123,8 @@ PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 export PATH="$STACKROOT/opt/urxvt/bin":$PATH
 export PERL5LIB="$STACKROOT/opt/urxvt/perl_inc":$PERL5LIB
 
+# -- dotfile bin  #TODO: determine programmatically?
+export PATH="$STACKROOT/.dotfiles/bin":$PATH
 
 # -- gpgagent
 export GPGAGENT=/usr/bin/gpg-agent

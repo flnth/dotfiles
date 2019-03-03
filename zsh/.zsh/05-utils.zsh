@@ -112,8 +112,8 @@ tmux_show_text()
 	tmux setw -g status-right $newtext
 }
 
-# alias tmux='$DIR_LOCAL/bin/tmux'
-alias tmuxn='tmux new-session -s $$'
+#alias tmux='$DIR_LOCAL/bin/tmux'
+#alias tmuxn='tmux new-session -s $$'
 _trap_exit() { tmux kill-session -t $$ }
 trap _trap_exit EXIT
 

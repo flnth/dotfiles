@@ -1,13 +1,16 @@
-#!/bin/zsh
 
 # Load resources
 xrdb -merge $HOME/.Xresources
+
+# fix x cursor thing
+xsetroot -cursor_name left_ptr
 
 setxkbmap gb
 xset r rate 225 35
 xset r 117
 setxkbmap -option
 setxkbmap -option caps:escape
+
 
 # -- key mappings --------------------------------------------------------------
 # see /usr/share/x11/xkb/rules/base for available optionsi
@@ -30,7 +33,4 @@ fi
 #     source ~/.xmonad/xmonad-session-rc
 #     exec xmonad
 # fi
-
-# fix x cursor thing
-xsetroot -cursor_name left_ptr
 

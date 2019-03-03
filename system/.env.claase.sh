@@ -35,7 +35,7 @@ export PATH="$STACKROOT/opt/stack:$PATH"
 
 # -- software ------------------------------------------------------------------
 export DIR_LOCAL="$STACKROOT/software/local"
-export DIR_EMACSD="$STACKROOT/.emacs.d/"
+export DIR_EMACSD="$STACKROOT/.emacs.d"
 # export SPACEMACSDIR="$DIR_EMACSD/spacemacs"
 export DIR_QT="$STACKROOT/software/Qt/5.11.1"
 export BOOST_ROOT="$STACKROOT/libraries/boost_1_66_0"
@@ -65,7 +65,7 @@ export GUIX_LOCPATH="$GUIX_PROFILE/lib/locale"
 #export GI_TYPELIB_PATH="$GUIX_PROFILE/lib/girepository-1.0"
 #export PYTHONPATH="$GUIX_PROFILE/lib/python3.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
 #export PYTHONPATH="$GUIX_PROFILE/lib/python2.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
-#export TERMINFO_DIRS="$GUIX_PROFILE/share/terminfo${TERMINFO_DIRS:+:}$TERMINFO_DIRS"
+export TERMINFO_DIRS="$GUIX_PROFILE/share/terminfo${TERMINFO_DIRS:+:}$TERMINFO_DIRS"
 #export GUIX_GTK3_PATH="$GUIX_PROFILE/lib/gtk-3.0${GUIX_GTK3_PATH:+:}$GUIX_GTK3_PATH"
 
 
@@ -87,6 +87,7 @@ export PATH="$HOME/software/local/bin:$PATH"
 export PATH="$NPM_PACKAGES/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$DIR_LOCAL/lib/python/bin:$PATH"
+export PATH="$STACKROOT/.dotfiles/bin:$PATH"
 
 export MANPATH="$STACKROOT/share/man:$MANPATH"
 export MANWIDTH=100

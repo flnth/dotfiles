@@ -125,7 +125,7 @@ chmod +x stack_install.sh
 ./stack_install.sh -d $STACKROOT/opt/stack
 
 echo "building xmonad..."
-cd ~/.dotfiles/x/.xmonad  # TODO:  hardcoded path into this repo...
+cd $STACKROOT/.dotfiles/x/.xmonad  # TODO:  hardcoded path into this repo...
 stack build
 ./build xmonad-x86_64-linux  # TODO: need to hardcode...?
 
@@ -148,8 +148,9 @@ echo "\n"
 #█▓▒░ dotfiles
 
 # gitconfig
-if [[ ! -f "git/.gitconfig" ]]; then
+if [[ ! -e "$HOME/.gitconfig" ]]; then
    echo_ "Creating git/gitconfig.$(hostname) and git/.gitconfig ..."
+   [[ -L "$HOME/.gitconfig" ]] && rm $HOME/.gitconfig
    . install/create-gitconfig.sh git/gitconfig.template git/gitconfig.$(hostname)
    ln -s gitconfig.$(hostname) git/.gitconfig
    git add git/gitconfig.$(hostname)
@@ -157,7 +158,7 @@ fi
 
 # symlinks
 echo_ "Symlinking dotfiles..."
-dirs="x tmux git fonts highlight share system tmux xdg zsh"
+dirs="x tmux git fonts highlight share system tmux xdg zsh git"
 
 #echo "...zsh into $ZDOTDIR"
 # stow zsh -t $ZDOTDIR  # TODO: ZDOTDIR != $HOME, maybe?
@@ -165,6 +166,7 @@ dirs="x tmux git fonts highlight share system tmux xdg zsh"
 [[ -f etc/etc/priv/.authinfo.gpg ]] && ln -s etc/etc/priv/.authinfo.gpg ~/.authinfo.gpg
 
 echo "...($dirs)"
+cd $STACKROOT/.dotfiles
 for dir in $dirs; do
 	# TODO:  what if some files already exist...? check beforehand? output error?
 	stow $dir -t $HOME

@@ -85,9 +85,6 @@
 	prompt = false
 	cmd = icdiff
 
-[mergetool "meld"]
-	path = /home/fthevissen/system/meld
-
 [diff]
 	mnemonicprefix = true
 	renames = copies

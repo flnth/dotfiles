@@ -519,7 +519,8 @@ fzf-pf() {
 	zle reset-prompt
 	zle-line-init
 
-	out=$(rg --files --hidden ./ 2> /dev/null | fzf1 --ansi --expect=enter,alt-d --color hl:2)
+	local __rg_ignore_file=$STACKROOT/etc/ripgrep_ignore
+	out=$(rg --files --hidden --ignore-file $__rg_ignore_file  ./ 2> /dev/null | fzf1 --ansi --expect=enter,alt-d --color hl:2)
 	# out=(${=out})
 	out=("${(f)out}")
 	key=$out[1]
@@ -538,7 +539,8 @@ fzf-pf() {
 zle -N fzf-pf
 
 fzf-Mf() {
-	out=$(rg --files ./ 2> /dev/null | fzf1 --ansi --expect=enter,alt-d --color hl:2)
+	local __rg_ignore_file=$STACKROOT/etc/ripgrep_ignore
+	out=$(rg --files --hidden --ignore-file $__rg_ignore_file  ./ 2> /dev/null | fzf1 --ansi --expect=enter,alt-d --color hl:2)
 	out=("${(f)out}")
 	key=$out[1]
 	sel=$out[2]
@@ -633,7 +635,7 @@ fzf-pS()
 	# echo "escaped_pattern: $__escaped_pattern"
 	local __rg_ignore_file=$STACKROOT/etc/ripgrep_ignore
 
-	out=($(rg -n --column --no-heading --color always --ignore-file $__rg_ignore_file $__pattern ./ 2> /dev/null | fzf1 --height 0% --ansi --expect=enter,alt-d --preview="$__preview_cmd" --preview-window=$__prev_window --color bg+:238,fg+:254))
+	out=($(rg -n --hidden --column --no-heading --color always --ignore-file $__rg_ignore_file $__pattern ./ 2> /dev/null | fzf1 --height 0% --ansi --expect=enter,alt-d --preview="$__preview_cmd" --preview-window=$__prev_window --color bg+:238,fg+:254))
 	out=(${=out})
 	key=$out[1]
     sel=("${(@s/:/)out[2]}")

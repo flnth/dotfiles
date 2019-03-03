@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+emacsclient -c -nw --socket-name=/tmp/emacs1000/server $@
+

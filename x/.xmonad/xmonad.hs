@@ -385,7 +385,7 @@ mScratchpads dir_system = [ NS "terminal" spawnTerm findTerm manageTerm
         w = 0.3
         l = 0.618 - 0.05
 
-    spawnSubTerm = "urxvtcd" ++ " -fn 'xft:CodeNewRoman Nerd Font:pixelsize=16:style=Book,xft:file-icons:pixelsize=14' -fb 'xft:CodeNewRoman Nerd Font:pixelsize=18:style=Bold,xft:file-icons:pixelsize=14' -fi 'xft:CodeNewRoman Nerd Font:pixelsize=18:style=Italic,xft:file-icons:pixelsize=14' -fbi 'xft:CodeNewRoman Nerd Font:pixelsize=18:style=Italic,xft:file-icons:pixelsize=14'" ++ " -name subterm -e tmux"
+    spawnSubTerm = dir_system ++ "/urxvtcd.sh" ++ " -fn 'xft:CodeNewRoman NF:pixelsize=15:style=Book,xft:file-icons:pixelsize=13' -fb 'xft:CodeNewRoman NF:pixelsize=15:style=Bold,xft:file-icons:pixelsize=13' -fi 'xft:CodeNewRoman NF:pixelsize=15:style=Italic,xft:file-icons:pixelsize=13' -fbi 'xft:CodeNewRoman Nerd Font:pixelsize=15:style=Italic,xft:file-icons:pixelsize=13'" ++ " -name subterm -e tmux"
     findSubTerm = resource =? "subterm"
     manageSubTerm = customFloating $ W.RationalRect l t w h
       where

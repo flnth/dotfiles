@@ -50,7 +50,7 @@ fi
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # emacs daemon
-[ ! -z $DIR_SYSTEM ] && [ -f "$DIR_SYSTEM/emacsd" ] && "$DIR_SYSTEM/emacsd"
+[ $( command -v emacsd ) ] && emacsd
 
 # owncloud
 if [ "$LOC" = "home" ] && [ $(command -v owncloud) ] ; then

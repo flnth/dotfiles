@@ -97,12 +97,6 @@ fi
 echo "installing fzf..."
 [[ ! -f $GOPATH/bin/fzf ]] && go get -u github.com/junegunn/fzf
 
-# xmonadctl
-echo "building xmonadctl..."
-cd x && ghc --make xmonadctl.hs && rm {xmonadctl.o,xmonadctl.hi} && \
-mv xmonadctl ../bin
-cd ..
-
 # ycmd
 echo "installing ycmd..."
 rev="6d8ddd5d6b5b9c2f885cfd5e589231d30d3c7360"
@@ -122,6 +116,25 @@ echo "installing fd,ripgrep..."
 cargo install fd
 cargo install ripgrep
 
+# stack, xmonad, taffybar
+
+echo "installing and updating stack..."
+cd /tmp
+curl -sSL https://get.haskellstack.org/ > stack_install.sh
+chmod +x stack_install.sh
+./stack_install.sh -d $STACKROOT/opt/stack
+
+echo "building xmonad..."
+cd ~/.dotfiles/x/.xmonad  # TODO:  hardcoded path into this repo...
+stack build
+./build xmonad-x86_64-linux  # TODO: need to hardcode...?
+
+# xmonadctl
+echo "building xmonadctl..."
+cd x && ghc --make xmonadctl.hs && rm {xmonadctl.o,xmonadctl.hi} && \
+	mv xmonadctl ../bin
+cd ..
+
 echo "\n"
 #█▓▒░ dotfiles
 
@@ -134,11 +147,11 @@ if [[ ! -f "git/.gitconfig" ]]; then
 fi
 
 # symlinks
-dirs="x tmux git fonts"
+dirs="x tmux git fonts highlight share system tmux xdg zsh"
 echo_ "Symlinking dotfiles..."
 
 #echo "...zsh into $ZDOTDIR"
-# stow zsh -t $ZDOTDIR  # TODO: ZDOTDIR != $HOME, maybe?        
+# stow zsh -t $ZDOTDIR  # TODO: ZDOTDIR != $HOME, maybe?
 
 [[ -f etc/etc/priv/.authinfo.gpg ]] && ln -s etc/etc/priv/.authinfo.gpg ~/.authinfo.gpg
 
@@ -151,12 +164,12 @@ done
 echo "\n"
 #█▓▒░ emacs
 echo_ "Emacs configuration..."
-cd $HOME
+cd $STACKROOT
 rm -rf .emacs.d
-https://github.com/flnth/emacs.d.git .emacs.d
+git clone https://github.com/flnth/emacs.d.git .emacs.d
 cd .emacs.d
 git submodule update --init --recursive
-ln -s .spacemacs 
+cd $HOME && ln -s $STACKROOT/.emacs.d/.spacemacs .spacemacs
 
 
 

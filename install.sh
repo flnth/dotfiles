@@ -156,8 +156,8 @@ if [[ ! -f "git/.gitconfig" ]]; then
 fi
 
 # symlinks
-dirs="x tmux git fonts highlight share system tmux xdg zsh"
 echo_ "Symlinking dotfiles..."
+dirs="x tmux git fonts highlight share system tmux xdg zsh"
 
 #echo "...zsh into $ZDOTDIR"
 # stow zsh -t $ZDOTDIR  # TODO: ZDOTDIR != $HOME, maybe?

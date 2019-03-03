@@ -34,3 +34,5 @@ fi
 #     exec xmonad
 # fi
 
+# restart xmonad (with environment set)
+xmonad --recompile && xmonad --restart

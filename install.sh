@@ -54,7 +54,11 @@ echo "\n"
 if [[ $response == (y|yes|Y) ]]; then
 	echo_ "Installing guix..."
 	$(install/install-guix.sh)
-	# TODO:  application setup (locales, etc.
+	echo "Updating guix..."
+	export PATH="$HOME/.config/guix/current/bin/guix"
+	guix pull
+	guix package -u guix
+	guix package -u
 	echo_ "Installing official guix packages..."
 	. install/install-guix-packages.sh guix/official
 	echo_ "Installing custom guix packages..."

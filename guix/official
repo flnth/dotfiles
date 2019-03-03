@@ -1,7 +1,6 @@
 # -*- sh -*-
 
 glibc-locales
-emacs-minimal
 
 # dev
 python2
@@ -19,7 +18,8 @@ source-highlight
 ranger
 
 # wm
-xmonad
+#xmonad
+#ghc-xmonad-contrib
 
 # misc
 libsecret

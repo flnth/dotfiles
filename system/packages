@@ -19,6 +19,19 @@ cargo
 
 # libs
 libperl-dev
+libgtk-3-dev
+gobject-introspection
+libgirepository1.0-dev
+libcairo2
+libcairo2-dev
+licairo-gobject2
+libdbusmenu-gtk3-4
+libdbusmenu-gtk4
+libdbusmenu-gtk-dev
+libdbusmenu-gtk3-dev
+gir1.2-dbusmenu-glib-0.4
+gir1.2-dbusmenu-gtk-0.4
+gir1.2-dbusmenu-gtk3-0.4
 
 # haskell
 ghc

@@ -20,7 +20,7 @@ export DIR_MAIL="$HOME/.mail"
 # -- sync  ---------------------------------------------------------------------
 export DIR_SYSTEM="$STACKROOT/system"
 export DIR_LIBRARY="$HOME/cloud"
-export DIR_CODEARCHIVE="$HOME/cloud/41    Code"
+export DIR_CODEARCHIVE="$STACKROOT/share/code"
 export DIR_DOTFILES="$STACKROOT/.cfg"
 export DIR_NOTES="$HOME/cloud/82_Notes"
 export DIR_ORG="$HOME/cloud/82_Notes/org"

@@ -26,3 +26,32 @@ libsecret
 gnupg
 redshift
 xscreensaver
+
+# ---------- python --------
+# plotting
+#python-matplotlib
+#python-matplotlib-documentation
+#python-seaborn
+
+# pydata
+#python-pandas
+#python-numpy
+#python-numpydoc
+#python-numpy-documentation
+#python-numexpr
+#python-autograd
+#python-scipy
+#python-numba
+
+# gui
+#python-pyqt
+#python-click
+#python-click-threading
+
+# jupyter / ipython
+#python-ipython
+#jupyter
+#python-jupyter-client
+#python-ipykernel
+#python-notebook
+

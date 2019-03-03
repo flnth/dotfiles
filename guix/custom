@@ -3,6 +3,7 @@
 emacs-from-source
 mu-from-source
 authinfo
+polybar
 
 # mainly for proper terminfos
 urxvt

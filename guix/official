@@ -18,8 +18,8 @@ source-highlight
 ranger
 
 # wm
-#xmonad
-#ghc-xmonad-contrib
+# xmonad   # useless without cabal or stack ... :(
+# ghx-xmonad-contrib
 
 # misc
 libsecret

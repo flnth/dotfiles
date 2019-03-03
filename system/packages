@@ -15,7 +15,11 @@ shutter
 hsetroot
 highlight
 pandoc
-remmina
+strace
+dzen2
+
+# shell
+htop
 
 # dev
 git

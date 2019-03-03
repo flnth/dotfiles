@@ -57,6 +57,7 @@ export GUIX_PROFILE="$STACKROOT/.guix-profile"
 
 #export INFOPATH="$DIR_LOCAL/share/info":"$GUIX_PROFILE/share/info"
 export PATH="$GUIX_PROFILE/bin:$GUIX_PROFILE/sbin${PATH:+:}$PATH"
+export PATH="$HOME/.config/guix/current/bin:$PATH"
 #export GUILE_LOAD_PATH="$GUIX_PROFILE/share/guile/site/2.2${GUILE_LOAD_PATH:+:}$GUILE_LOAD_PATH"
 #export GUILE_LOAD_COMPILED_PATH="$GUIX_PROFILE/lib/guile/2.2/site-ccache${GUILE_LOAD_COMPILED_PATH:+:}$GUILE_LOAD_COMPILED_PATH"
 #export XDG_DATA_DIRS="$GUIX_PROFILE/share${XDG_DATA_DIRS:+:}$XDG_DATA_DIRS"

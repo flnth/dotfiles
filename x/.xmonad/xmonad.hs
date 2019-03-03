@@ -363,7 +363,7 @@ mScratchpads dir_system = [ NS "terminal" spawnTerm findTerm manageTerm
                           ]
 
   where
-    spawnTerm = dir_system ++ "/urxvtcd.sh" ++ " -name scratchterm -e emacsclient -nw --socket-name=/tmp/emacs1000/server"
+    spawnTerm = "urxvtcd" ++ " -name scratchterm -e emacsclient -nw --socket-name=/tmp/emacs1000/server"
     -- spawnTerm = dir_system ++ "/emacsclient_gui -e '(set-frame-name \"scratchterm\")'"
     -- findTerm  =  stringProperty "_NET_WM_NAME" =? "scratchterm"
     findTerm  =  resource =? "scratchterm"
@@ -371,9 +371,9 @@ mScratchpads dir_system = [ NS "terminal" spawnTerm findTerm manageTerm
       where
         h = 0.5
         t = 0.1
-        w = 0.5
+        w = 0.35
         l = (1-w)/2
-    spawnErc = dir_system ++ "/urxvtcd.sh" ++ " -name scratcherc -e emacsclient -nw --socket-name=/tmp/emacs1000/server"
+    spawnErc = "urxvtcd" ++ " -name scratcherc -e emacsclient -nw --socket-name=/tmp/emacs1000/server"
     -- spawnErc = dir_system ++ "/emacsclient_gui -e '(+chat-new-frame \"scratcherc\")'"
     -- findErc  = resource =? "scratcherc"
     -- findErc  = stringProperty "_NET_WM_NAME" =? "scratcherc"
@@ -382,10 +382,10 @@ mScratchpads dir_system = [ NS "terminal" spawnTerm findTerm manageTerm
       where
         h = 0.3
         t = 0.05
-        w = 0.4
+        w = 0.3
         l = 0.618 - 0.05
 
-    spawnSubTerm = dir_system ++ "/urxvtcd.sh" ++ " -fn 'xft:CodeNewRoman Nerd Font:pixelsize=16:style=Book,xft:file-icons:pixelsize=14' -fb 'xft:CodeNewRoman Nerd Font:pixelsize=18:style=Bold,xft:file-icons:pixelsize=14' -fi 'xft:CodeNewRoman Nerd Font:pixelsize=18:style=Italic,xft:file-icons:pixelsize=14' -fbi 'xft:CodeNewRoman Nerd Font:pixelsize=18:style=Italic,xft:file-icons:pixelsize=14'" ++ " -name subterm -e tmux"
+    spawnSubTerm = "urxvtcd" ++ " -fn 'xft:CodeNewRoman Nerd Font:pixelsize=16:style=Book,xft:file-icons:pixelsize=14' -fb 'xft:CodeNewRoman Nerd Font:pixelsize=18:style=Bold,xft:file-icons:pixelsize=14' -fi 'xft:CodeNewRoman Nerd Font:pixelsize=18:style=Italic,xft:file-icons:pixelsize=14' -fbi 'xft:CodeNewRoman Nerd Font:pixelsize=18:style=Italic,xft:file-icons:pixelsize=14'" ++ " -name subterm -e tmux"
     findSubTerm = resource =? "subterm"
     manageSubTerm = customFloating $ W.RationalRect l t w h
       where
@@ -409,7 +409,7 @@ mScratchpads dir_system = [ NS "terminal" spawnTerm findTerm manageTerm
         t = 0.05
         w = 0.9
         l = 0.05
-    spawnTop = dir_system ++ "/urxvtcd.sh" ++ " -depth 32 -name scratchtop -e htop -d 6; compton-trans -c 95"
+    spawnTop = "urxvtcd" ++ " -depth 32 -name scratchtop -e htop -d 6; compton-trans -c 95"
     findTop = resource =? "scratchtop"
     manageTop = customFloating $ W.RationalRect l t w h
       where
@@ -417,7 +417,7 @@ mScratchpads dir_system = [ NS "terminal" spawnTerm findTerm manageTerm
         t = 0.05
         w = 0.9
         l = 0.05
-    spawnElfeed = dir_system ++ "/urxvtcd.sh" ++ " -name scratchelfeed -e emacsclient -nw --socket-name=/tmp/emacs1000/server -e '(fn-elfeed-from-term)'"
+    spawnElfeed = "urxvtcd" ++ " -name scratchelfeed -e emacsclient -nw --socket-name=/tmp/emacs1000/server -e '(fn-elfeed-from-term)'"
     findElfeed = resource =? "scratchelfeed"
     manageElfeed = customFloating $ W.RationalRect l t w h
       where
@@ -718,7 +718,7 @@ defaults dzenproc dir_system =
   def {
           -- (Non-overriding fields in the default config will use defaults defined in
           -- xmonad/XMonad/Config.hs)
-          terminal           = dir_system ++ "/urxvtcd.sh;",
+          terminal           = "urxvtcd",
           focusFollowsMouse  = False,
           clickJustFocuses   = False,
           borderWidth        = 1,

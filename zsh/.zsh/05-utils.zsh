@@ -1,6 +1,10 @@
 
 #█▓▒░ utils:   functions and aliases
 cur_dir=$(dirname $(readlink -f "$0"))
+
+[[ -f $cur_dir/alias/alias.$(hostname).zsh ]] && \
+	source $cur_dir/alias/alias.$(hostname).zsh
+
 #for alias in $cur_dir/alias/*.zsh; do source $cur_dir/alias/$alias ; done
 
 #for f in $cur_dir/alias/*.zsh; do

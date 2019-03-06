@@ -1,0 +1,6 @@
+#!/usr/bin/zsh
+
+# if [[ -z "${tmux}" ]]; then
+newtext=$1
+tmux setw -g status-right $1
+# fi

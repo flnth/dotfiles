@@ -54,3 +54,6 @@ arandr
 #python-ipykernel
 #python-notebook
 
+# mist
+python-pyyaml
+python2-pyyaml

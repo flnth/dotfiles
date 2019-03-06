@@ -53,7 +53,7 @@ export DIR_SUBLIME="$STACKROOT/software/sublime_text_3/"
 # default linux configuration dir:
 export XDG_CONFIG_HOME=$HOME/.config
 
-export GUIX_PROFILE="$STACKROOT/.guix-profile"
+export GUIX_PROFILE="$HOME/.guix-profile"
 
 #export INFOPATH="$DIR_LOCAL/share/info":"$GUIX_PROFILE/share/info"
 export PATH="$GUIX_PROFILE/bin:$GUIX_PROFILE/sbin${PATH:+:}$PATH"
@@ -64,8 +64,8 @@ export PATH="$HOME/.config/guix/current/bin:$PATH"
 #export GIO_EXTRA_MODULES="$GUIX_PROFILE/lib/gio/modules${GIO_EXTRA_MODULES:+:}$GIO_EXTRA_MODULES"
 export GUIX_LOCPATH="$GUIX_PROFILE/lib/locale"
 #export GI_TYPELIB_PATH="$GUIX_PROFILE/lib/girepository-1.0"
-#export PYTHONPATH="$GUIX_PROFILE/lib/python3.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
-#export PYTHONPATH="$GUIX_PROFILE/lib/python2.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
+export PYTHONPATH="$GUIX_PROFILE/lib/python3.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
+export PYTHONPATH="$GUIX_PROFILE/lib/python2.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
 export TERMINFO_DIRS="$GUIX_PROFILE/share/terminfo${TERMINFO_DIRS:+:}$TERMINFO_DIRS"
 #export GUIX_GTK3_PATH="$GUIX_PROFILE/lib/gtk-3.0${GUIX_GTK3_PATH:+:}$GUIX_GTK3_PATH"
 
@@ -89,6 +89,9 @@ export PATH="$NPM_PACKAGES/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$DIR_LOCAL/lib/python/bin:$PATH"
 export PATH="$STACKROOT/.dotfiles/bin:$PATH"  # TODO:  hardcoding of STACKROOT/.dotfiles
+
+# use distcc
+export PATH="/usr/lib/distcc:$PATH"
 
 export MANPATH="$STACKROOT/share/man:$MANPATH"
 export MANWIDTH=100

@@ -41,6 +41,11 @@ libdbusmenu-gtk3-dev
 gir1.2-dbusmenu-glib-0.4
 gir1.2-dbusmenu-gtk-0.4
 gir1.2-dbusmenu-gtk3-0.4
+libxmu-dev
+libperl-dev
+libperl5.24
+libperl5i-perl
+libsecret-1-dev
 
 # haskell
 ghc

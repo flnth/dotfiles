@@ -1,0 +1,4 @@
+#!/bin/bash
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu
+export PYTHONPATH="/home/fthevissen/.guix-profile/lib/python3.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
+python3 $@

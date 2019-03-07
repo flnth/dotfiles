@@ -227,9 +227,7 @@ URxvt.kuake.pos_x: 0
 URxvt.geometry: 140x20
 
 URxvt.perl-lib:	/home/fthevissen/opt/urxvt/perl_inc
-URxvt*perl-lib:	/home/fthevissen/opt/urxvt/perl_inc
 URxvt.path: /home/fthevissen/opt/urxvt/perl_inc
-URxvt*path: /home/fthevissen/opt/urxvt/perl_inc
 URxvt.secondaryScreen:	true
 URxvt.secondaryWheel:	  true
 URxvt*secondaryScroll:	false

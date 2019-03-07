@@ -17,6 +17,7 @@ highlight
 pandoc
 strace
 dzen2
+mlocate
 
 # shell
 htop

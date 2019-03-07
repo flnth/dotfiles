@@ -36,7 +36,6 @@ export PATH="$STACKROOT/opt/stack:$PATH"
 # -- software ------------------------------------------------------------------
 export DIR_LOCAL="$STACKROOT/software/local"
 export DIR_EMACSD="$STACKROOT/.emacs.d"
-# export SPACEMACSDIR="$DIR_EMACSD/spacemacs"
 export DIR_QT="$STACKROOT/software/Qt/5.11.1"
 export BOOST_ROOT="$STACKROOT/libraries/boost_1_66_0"
 
@@ -71,22 +70,22 @@ export TERMINFO_DIRS="$GUIX_PROFILE/share/terminfo${TERMINFO_DIRS:+:}$TERMINFO_D
 
 
 
-#export EDITOR='emacsclient -t -a=\"\"'
-#export ALTERNATE_EDITOR=""
-# export TERM=xterm-256color
-# export TERM=screen-256color
+export EDITOR='vim'
+# #export ALTERNATE_EDITOR=""
+# # export TERM=xterm-256color
+# # export TERM=screen-256color
 export TERM=rxvt-unicode-256color
 
-# -- paths ----------------------------------------------------------------------
+# # -- paths ----------------------------------------------------------------------
 export PKG_CONFIG_PATH="$DIR_LOCAL/lib/pkgconfig"
 export GOPATH="$STACKROOT/.go"
 export PATH="$GOPATH/bin:$PATH"
 
-export PATH="$DIR_ANACONDA/bin:$PATH"
-export PATH="$DIR_QT/gcc_64/bin:$PATH"
-export PATH="$HOME/software/local/bin:$PATH"
-export PATH="$NPM_PACKAGES/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
+#export PATH="$DIR_ANACONDA/bin:$PATH"
+#export PATH="$DIR_QT/gcc_64/bin:$PATH"
+#export PATH="$HOME/software/local/bin:$PATH"
+#export PATH="$NPM_PACKAGES/bin:$PATH"
+#export PATH="$HOME/.local/bin:$PATH"
 export PATH="$DIR_LOCAL/lib/python/bin:$PATH"
 export PATH="$STACKROOT/.dotfiles/bin:$PATH"  # TODO:  hardcoding of STACKROOT/.dotfiles
 
@@ -97,7 +96,7 @@ export MANPATH="$STACKROOT/share/man:$MANPATH"
 export MANWIDTH=100
 
 # configuration
-export ZDOTDIR="$HOME"
+export ZDOTDIR="$HOME" # TODO: change?
 
 # mlocate databases
 export MLOCATEPNAMES="build .emacs.d"

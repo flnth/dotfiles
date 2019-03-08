@@ -718,7 +718,7 @@ defaults dzenproc dir_system =
   def {
           -- (Non-overriding fields in the default config will use defaults defined in
           -- xmonad/XMonad/Config.hs)
-          terminal           = "urxvtcd -e tmux",
+          terminal           = "urxvtcd",
           focusFollowsMouse  = False,
           clickJustFocuses   = False,
           borderWidth        = 1,

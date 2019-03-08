@@ -81,7 +81,8 @@ export PKG_CONFIG_PATH="$DIR_LOCAL/lib/pkgconfig"
 export GOPATH="$STACKROOT/.go"
 export PATH="$GOPATH/bin:$PATH"
 
-export PATH="/usr/sbin:$PATH"
+export PATH="/sbin:/usr/sbin:$PATH"
+[[ -e "$HOME/bin" ]] && export PATH="$HOME/bin:$PATH"
 
 #export PATH="$DIR_ANACONDA/bin:$PATH"
 #export PATH="$DIR_QT/gcc_64/bin:$PATH"

@@ -74,6 +74,9 @@ export C_INCLUDE_PATH="/home/fthevissen/.guix-profile/include${C_INCLUDE_PATH:+:
 export CPLUS_INCLUDE_PATH="/home/fthevissen/.guix-profile/include${CPLUS_INCLUDE_PATH:+:}$CPLUS_INCLUDE_PATH"
 export CMAKE_PREFIX_PATH="/home/fthevissen/.guix-profile/${CMAKE_PREFIX_PATH:+:}$CMAKE_PREFIX_PATH"
 
+export CC="${HOME}/.guix-profile/bin/gcc"
+export CXX="${HOME}/.guix-profile/bin/g++"
+
 
 export EDITOR='emacsclient -t -a=\"\"'
 #export ALTERNATE_EDITOR=""

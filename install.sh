@@ -3,6 +3,7 @@ setopt sh_word_split
 echo_(){ echo "\n\033[0;31m█▓▒░ \033[0;32m$1\033[0m\n" }
 table(){ printf "%-10s %-30s\n" $1 $2 }
 
+# ----------------------------------------------------------
 #█▓▒░ environment
 
 echo_ "Checking environment..."
@@ -34,6 +35,7 @@ fi
 
 
 echo "\n"
+# ----------------------------------------------------------
 #█▓▒░ system packages
 
 echo_ "Installing system packages..."
@@ -47,6 +49,7 @@ echo_ "Installing system packages..."
 
 
 echo "\n"
+# ----------------------------------------------------------
 #█▓▒░ guix
 
 read -q "response?install guix packages? (y/n) "
@@ -57,7 +60,6 @@ if [[ $response == (y|yes|Y) ]]; then
 	echo "Updating guix..."
 	export PATH="$HOME/.config/guix/current/bin/guix"
 	guix pull
-	guix package -u guix
 	guix package -u
 	echo_ "Installing official guix packages..."
 	. install/install-guix-packages.sh guix/official
@@ -68,6 +70,7 @@ if [[ $response == (y|yes|Y) ]]; then
 fi
 
 echo "\n"
+# ----------------------------------------------------------
 #█▓▒░ other binaries
 
 echo_ "Installing other binaries..."
@@ -139,7 +142,21 @@ cd x && ghc --make xmonadctl.hs && rm {xmonadctl.o,xmonadctl.hi} && \
 	mv xmonadctl ../bin
 cd ..
 
+# ccls
+if [[ ! -d "$STACKROOT/opt/ccls" ]]; then
+	mkdir -p "$STACKROOT/opt/ccls"
+	cd "$STACKROOT/opt/ccls"
+	git clone https://github.com/MaskRay/ccls.git .
+	git checkout 400a77c
+	wget https://releases.llvm.org/8.0.0/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz
+	tar -xvf clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz
+	mv "clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-16.04" clang
+	cmake -H. -BRelease -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=$PWD/clang
+	cd Release && make -j4
+fi
+
 echo "\n"
+# ----------------------------------------------------------
 #█▓▒░ directory structure
 echo_ "Creating directories, cloning repositories..."
 
@@ -149,6 +166,7 @@ cd $STACKROOT/share
 [[ ! -d doc ]] && git clone https://efth@bitbucket.org/efth/org.git doc
 
 echo "\n"
+# ----------------------------------------------------------
 #█▓▒░ dotfiles
 
 # gitconfig
@@ -178,6 +196,7 @@ for dir in $dirs; do
 done
 
 echo "\n"
+# ----------------------------------------------------------
 #█▓▒░ emacs
 echo_ "Emacs configuration..."
 cd $STACKROOT

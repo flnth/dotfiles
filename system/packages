@@ -8,6 +8,7 @@ xinput
 # shell / x
 xsel
 xclip
+compton
 
 # misc
 stow

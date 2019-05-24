@@ -1,0 +1,6 @@
+#! /bin/bash
+
+# arg:  delay in seconds to wait with moving the window, sheq startup time
+
+i3-sensible-terminal &
+sleep $1 && i3-msg move left;

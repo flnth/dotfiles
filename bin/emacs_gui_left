@@ -1,0 +1,6 @@
+#! /bin/bash
+
+# arg:  delay in seconds to wait with moving the window, sheq startup time
+
+exec emacsclient -c --socket-name=/tmp/emacs1000/server &
+sleep $1 && i3-msg move left;

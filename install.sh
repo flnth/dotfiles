@@ -104,20 +104,6 @@ fi
 echo "installing fzf..."
 [[ ! -f $GOPATH/bin/fzf ]] && go get -u github.com/junegunn/fzf
 
-# ycmd
-echo "installing ycmd..."
-rev="6d8ddd5d6b5b9c2f885cfd5e589231d30d3c7360"
-
-if [[ ! -d "$STACKROOT/opt/ycmd" ]]; then
-	cd "$STACKROOT/opt"
-	git clone https://github.com/Valloric/ycmd.git
-	cd ycmd
-	git checkout $rev
-	git submodule update --init --recursive
-	python3 build.py --clang-completer
-fi
-# TODO: ycmd directories in emacs, maybe even put into path
-
 # ripgrep, fd
 echo "installing fd,ripgrep..."
 cargo install fd

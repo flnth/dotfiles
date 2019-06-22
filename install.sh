@@ -85,7 +85,7 @@ fi
 
 # urxvt
 echo "installing urxvt..."
-if [[ ! $(command -f urxvt) ]] ; then
+if [[ ! $(command -v urxvt) ]] ; then
 	cd $STACKROOT/opt
 	git clone https://github.com/flnth/rxvt-unicode.git urxvt
 	cd urxvt
@@ -110,7 +110,6 @@ cargo install fd
 cargo install ripgrep
 
 # stack, xmonad, taffybar
-
 echo "installing and updating stack..."
 cd /tmp
 curl -sSL https://get.haskellstack.org/ > stack_install.sh
@@ -139,6 +138,20 @@ if [[ ! -d "$STACKROOT/opt/ccls" ]]; then
 	mv "clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-16.04" clang
 	cmake -H. -BRelease -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=$PWD/clang
 	cd Release && make -j4
+fi
+
+# visual studio code for gdb/lldb debugging
+if [[ ! $(command -v code) ]]; then
+	wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+	sudo apt update && sudo apt install code
+fi
+
+# yed
+if [[ $(command -v yed) ]]; then
+	filename="yEd-3.19_with-JRE11_64-bit_setup.sh"
+	wget -q https://www.yworks.com/resources/yed/demo/$filename
+	chmod +x $filename
+	./$filename
 fi
 
 echo "\n"

@@ -106,6 +106,9 @@ URxvt.keysym.Shift-Menu:      \033[2;1D
 URxvt.keysym.Control-Shift-N:	\033[1;6A
 URxvt.keysym.Control-Shift-P:	\033[1;6B
 
+! -- emacs: debugging
+URxvt.keysym.Control-Shift-Q: \033[8;3F
+
 ! -- emacs: more navigation
 URxvt.keysym.Control-Shift-H:	\033[8;3A
 URxvt.keysym.Control-Shift-J:	\033[7;3A

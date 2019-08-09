@@ -40,3 +40,6 @@ fi
 # restart xmonad (with environment set)
 xmonad --recompile && xmonad --restart
 
+# start xscreensaver for xscreensaver-command to have a target
+xscreensaver &
+

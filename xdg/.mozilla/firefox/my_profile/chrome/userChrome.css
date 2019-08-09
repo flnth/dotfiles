@@ -1,0 +1,37 @@
+.tabbrowser-tab[selected] 
+{
+	background-image: none!important;
+	color: black !important;
+	font-weight: bold !important;
+}
+
+/*Changer la couleur de l'onglet courant:*/
+.tab-background[selected="true"] {
+	background-attachment: none!important;
+	background-color: #91c6f2!important;
+	background-image: none!important;
+}
+
+browser {
+	background-color: #000000 !important;
+}
+
+:root 
+{
+	--in-content-page-background:#36393f /*tab flash on new tab*/
+}
+
+/*changes "flash" on tab open color*/
+#browser vbox#appcontent tabbrowser,
+#content,
+#tabbrowser-tabpanels,
+browser[type=content-primary],
+browser[type=content] > html
+
+{
+	background: var(--in-content-page-background)!important
+}
+
+.browserContainer { background-color: #000000 !important; }
+
+#browser vbox#appcontent tabbrowser, #content, #tabbrowser-tabpanels, browser[type=content-primary], browser[type=content]>html { background: #000000 !important;}

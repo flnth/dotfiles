@@ -5,8 +5,8 @@ export env_set=1
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
-export STACKROOT="$HOME"
-export LOC="home" # work
+export STACKROOT="$HOME/localstorage"
+export LOC="work" # work
 export HOSTNAME="$HOST"
 
 # -- locale
@@ -14,7 +14,7 @@ export LC_ALL=en_GB.UTF-8
 export LANG=en_GB.UTF-8
 
 # -- mail ----------------------------------------------------------------------
-export DIR_MAIL="$HOME/.mail"
+export DIR_MAIL="$STACKROOT/.mail"
 
 # -- sync  ---------------------------------------------------------------------
 export DIR_SYSTEM="$STACKROOT/system"

@@ -26,6 +26,11 @@ c.TerminalInteractiveShell.editing_mode='vi'
 # no prompts on closing
 c.TerminalInteractiveShell.confirm_exit = False
 
+# Activate greedy completion
+#
+# This will enable completion on elements of lists, results of function calls,
+# etc., but can be unsafe because the code is actually evaluated on TAB.
+c.IPCompleter.greedy = False
 
 # Output prompt. '\#' will be transformed to the prompt number
 #c.PromptManager.out_template = ''
@@ -52,7 +57,7 @@ from IPython.terminal.prompts import Prompts, Token
 
 class MyPrompt(Prompts):
     def in_prompt_tokens(self, cli=None):
-        return [(Token.Prompt, 'py> ')]
+        return [(Token.Prompt, '> ')]
 
 c.TerminalInteractiveShell.prompts_class = MyPrompt
 
@@ -61,8 +66,4 @@ c.TerminalInteractiveShell.prompts_class = MyPrompt
 ##       Highlighting
 ## -----------------------------------------------------------------------------
 
-
-
-
-
-
+####### Ancestor

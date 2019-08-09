@@ -22,6 +22,7 @@ target=$2
 apps_list="libsecret-1-0  libsecret-1-dev"
 sudo apt install -y $(echo $apps_list)
 
+# TODO:  libsecret.
 if [[ ! -f $HOME/.git/git-credential-libsecret &&  -f "/usr/share/doc/git/contrib/credential/libsecret/Makefile" ]]; then
 	[[ ! -d "$HOME/.git" ]] && mkdir ~/.git
 	cp /usr/share/doc/git/contrib/credential/libsecret/* ~/.git

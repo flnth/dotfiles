@@ -21,6 +21,7 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/system:$PATH"
 fi
 
+env=$HOME/.env.$(hostname).sh
 if [ -z $env_set ] && [ -e $env ]; then
 	# TODO: lightweight configuration for when STACKROOT is not available, i.e.
 	# on a foreign localstorage

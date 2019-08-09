@@ -1,0 +1,9 @@
+@-moz-document url("about:newtab") {
+	body {
+		background-color: #000000 !important;
+	}
+	#newtab-scrollbox {
+		background-image: none !important;
+		background-color: #000000 !important;
+	}
+}

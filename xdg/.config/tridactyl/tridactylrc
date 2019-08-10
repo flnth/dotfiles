@@ -1,0 +1,24 @@
+bind j scrollline 3
+bind k scrollline -3
+
+bind J tabnext
+bind K tabprev
+
+set findresults 0
+set historyresults 0
+
+set allowautofocus false
+
+alias tabopen2 composite tabopen
+bind t fillcmdline tabopen2
+
+alias open2 composite open
+bind o fillcmdline open2
+
+# guiset gui none
+
+bind / fillcmdline find
+bind n findnext
+bind N findnext -1
+
+# command update_userchrome js (async() => {const N = tri.native; if (!(await N.nativegate('0.1.1'))) return; const prof = await N.getProfileDir(); const rc = await N.getrcpath(); const spath = rc.match(/(.*\/).*/)[1] + 'userChrome.css'; const src = await N.read(spath); await N.write(prof + "/chrome/userChrome.css", src.content) })()

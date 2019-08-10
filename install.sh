@@ -154,6 +154,15 @@ if [[ $(command -v yed) ]]; then
 	./$filename
 fi
 
+# fman
+if [[ $(command -v fman) ]]; then
+	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 9CFAF7EB
+	sudo apt-get install apt-transport-https
+	echo "deb [arch=amd64] https://fman.io/updates/ubuntu/ stable main" | sudo tee /etc/apt/sources.list.d/fman.list
+	sudo apt-get update
+	sudo apt-get install fman
+fi
+
 echo "\n"
 # ----------------------------------------------------------
 #█▓▒░ directory structure

@@ -23,6 +23,7 @@ then
     xinput set-prop "pointer:Logitech MX Anywhere 2S" "libinput Accel Speed" $MOUSE_SPEED
 else
 	xinput set-prop 12 273 -0.7
+	xinput set-prop 11 273 -0.7
 	#xinput set-prop "pointer:Logitech MX Anywhere 2" "Device Accel Profile" -1
     #xinput set-prop "pointer:Logitech MX Anywhere 2" "Device Accel Constant Deceleration" 1.5
     #xinput set-prop "pointer:Logitech MX Anywhere 2" "Device Accel Adaptive Deceleration" 1.0

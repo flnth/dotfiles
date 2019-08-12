@@ -155,6 +155,8 @@ if [[ ! -d "$STACKROOT/opt/ccls" ]]; then
 	cd Release && make -j4
 fi
 
+# guix package -r gcc-toolchain glibc binutils gcc
+
 echo "\n"
 # ----------------------------------------------------------
 #█▓▒░ directory structure

@@ -15,6 +15,8 @@ class ZMagics(Magics):
     @line_magic
     def z(self, line):
         z_fun(line)
+    def exit(self, line):
+        print("my exit called with " + line)
 
 ip = get_ipython()
 ip.register_magics(ZMagics)

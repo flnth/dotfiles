@@ -30,3 +30,4 @@ DEBS_avail
 *.out
 .git
 *man3*
+*.ccls.*

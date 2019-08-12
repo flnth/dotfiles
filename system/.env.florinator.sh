@@ -35,13 +35,13 @@ export PATH="$STACKROOT/opt/stack:$PATH"
 
 # -- software ------------------------------------------------------------------
 export DIR_LOCAL="$STACKROOT/software/local"
-export DIR_EMACSD="$STACKROOT/.emacs.d"
+export DIR_EMACSD="$STACKROOT/.emacs.d/"
 export DIR_QT="$STACKROOT/software/Qt/5.11.1"
 export BOOST_ROOT="$STACKROOT/libraries/boost_1_66_0"
 
 export DIR_FASD="$STACKROOT/.fasd-install"
 
-export DIR_ANACONDA="$STACKROOT/software/anaconda"
+export DIR_ANACONDA="$STACKROOT/software/Anaconda3"
 export DIR_QTCREATOR="$STACKROOT/software/qtcreatorp"
 export DIR_PYCHARM="$STACKROOT/software/pycharm"
 export DIR_SUBLIME="$STACKROOT/software/sublime_text_3/"
@@ -63,11 +63,10 @@ export PATH="$HOME/.config/guix/current/bin:$PATH"
 #export GIO_EXTRA_MODULES="$GUIX_PROFILE/lib/gio/modules${GIO_EXTRA_MODULES:+:}$GIO_EXTRA_MODULES"
 export GUIX_LOCPATH="$GUIX_PROFILE/lib/locale"
 #export GI_TYPELIB_PATH="$GUIX_PROFILE/lib/girepository-1.0"
-export PYTHONPATH="$GUIX_PROFILE/lib/python3.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
-export PYTHONPATH="$GUIX_PROFILE/lib/python2.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
+# export PYTHONPATH="$GUIX_PROFILE/lib/python3.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
+# export PYTHONPATH="$GUIX_PROFILE/lib/python2.7/site-packages${PYTHONPATH:+:}$PYTHONPATH"
 export TERMINFO_DIRS="$GUIX_PROFILE/share/terminfo${TERMINFO_DIRS:+:}$TERMINFO_DIRS"
 #export GUIX_GTK3_PATH="$GUIX_PROFILE/lib/gtk-3.0${GUIX_GTK3_PATH:+:}$GUIX_GTK3_PATH"
-
 
 
 export EDITOR='vim'
@@ -84,7 +83,7 @@ export PATH="$GOPATH/bin:$PATH"
 export PATH="/sbin:/usr/sbin:$PATH"
 [[ -e "$HOME/bin" ]] && export PATH="$HOME/bin:$PATH"
 
-#export PATH="$DIR_ANACONDA/bin:$PATH"
+export PATH="$DIR_ANACONDA/bin:$PATH"
 #export PATH="$DIR_QT/gcc_64/bin:$PATH"
 #export PATH="$HOME/software/local/bin:$PATH"
 #export PATH="$NPM_PACKAGES/bin:$PATH"

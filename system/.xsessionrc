@@ -26,6 +26,9 @@ else
 
     # kill ibus
     kill `pgrep ibus` &
+
+	# volume control applet in debian
+	mate-volume-control-applet &
 fi
 
 # fix weird x cursor thing (for xmonad?)
